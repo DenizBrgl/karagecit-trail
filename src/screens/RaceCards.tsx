@@ -1,5 +1,3 @@
-import React from "react";
-
 const courses = [
   {
     km: "8K",

@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutPage = () => {
   return (
     <div className="pt-24 bg-gray-100 text-gray-800">

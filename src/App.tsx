@@ -13,7 +13,7 @@ import RunList from "./screens/RunList";
 import RulesPage from "./screens/RulesPage";
 import ProgramPage from "./screens/ProgramPage";
 import AwardsPage from "./screens/AwardsPage";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SupportersPage from "./screens/SupportersPage";
 import AccommodationsPage from "./screens/AccommodationsPage";
 

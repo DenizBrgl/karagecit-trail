@@ -1,5 +1,3 @@
-import React from "react";
-
 const TrailDetail17K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
