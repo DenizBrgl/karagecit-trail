@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openSubmenu, setOpenSubmenu] = useState(null);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  const toggleSubmenu = (key) => {
+  const toggleSubmenu = (key: string) => {
     setOpenSubmenu(openSubmenu === key ? null : key);
   };
 

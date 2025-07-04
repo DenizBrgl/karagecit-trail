@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
+type TimeLeft = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
 
 const Countdown = () => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = (): TimeLeft => {
     const targetDate = new Date("2025-08-31T00:00:00");
     const now = new Date();
-    const difference = targetDate - now;
+    const difference = targetDate.getTime() - now.getTime();
 
-    let timeLeft = {};
+    let timeLeft: TimeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
 
     if (difference > 0) {
       timeLeft = {
@@ -20,7 +31,7 @@ const Countdown = () => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
