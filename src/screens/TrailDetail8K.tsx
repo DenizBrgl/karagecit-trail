@@ -15,15 +15,27 @@ const TrailDetail8K = () => {
           className="border"
         ></iframe>
         <div className="flex justify-between gap-4 mb-4 mt-4">
-          <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+          <a
+            href="/files/8k.kml"
+            download
+            className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+          >
             KML
-          </button>
-          <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+          </a>
+          <a
+            href="/files/8k.gpx"
+            download
+            className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+          >
             GPX
-          </button>
-          <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+          </a>
+          <a
+            href="/files/8k.kmz"
+            download
+            className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+          >
             KMZ
-          </button>
+          </a>
         </div>
       </div>
 

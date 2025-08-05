@@ -31,9 +31,9 @@ const Navbar = () => {
             Anasayfa
           </Link>
 
-          <a href="/AboutPage" className="block px-4 py-1 hover:bg-gray-100">
+          <Link to="/AboutPage" className="block px-4 py-1 hover:bg-gray-100">
             Hakkımızda
-          </a>
+          </Link>
 
           <div className="relative group">
             <button className="hover:underline">Bilgi Noktası ▾</button>
@@ -146,11 +146,17 @@ const Navbar = () => {
           <Link
             to="/"
             className="bg-black text-white px-4 py-1 rounded-md font-bold w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Anasayfa
           </Link>
+          <Link to="/AboutPage" onClick={() => setMenuOpen(false)}>
+            Hakkımızda
+          </Link>
 
-          <Link to="/ContactPage">İletişim</Link>
+          <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
+            İletişim
+          </Link>
 
           <button
             onClick={() => toggleSubmenu("info")}
@@ -160,11 +166,21 @@ const Navbar = () => {
           </button>
           {openSubmenu === "info" && (
             <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link to="/RulesPage">Genel Kurallar</Link>
-              <Link to="/AwardsPage">Ödüller</Link>
-              <Link to="/ProgramPage">Program</Link>
-              <Link to="/AccommodationsPage">Konaklama</Link>
-              <Link to="/RunList">Katılımcı Listesi</Link>
+              <Link to="/RulesPage" onClick={() => setMenuOpen(false)}>
+                Genel Kurallar
+              </Link>
+              <Link to="/AwardsPage" onClick={() => setMenuOpen(false)}>
+                Ödüller
+              </Link>
+              <Link to="/ProgramPage" onClick={() => setMenuOpen(false)}>
+                Program
+              </Link>
+              <Link to="/AccommodationsPage" onClick={() => setMenuOpen(false)}>
+                Konaklama
+              </Link>
+              <Link to="/RunList" onClick={() => setMenuOpen(false)}>
+                Katılımcı Listesi
+              </Link>
             </div>
           )}
 
@@ -176,9 +192,15 @@ const Navbar = () => {
           </button>
           {openSubmenu === "tracks" && (
             <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link to="/TrailDetail8K">8K DISCOVERY RUN</Link>
-              <Link to="/TrailDetail17K">17K WILD CANYON</Link>
-              <Link to="/TrailDetail33K">33K MOUNTAIN LEGEND</Link>
+              <Link to="/TrailDetail8K" onClick={() => setMenuOpen(false)}>
+                8K DISCOVERY RUN
+              </Link>
+              <Link to="/TrailDetail17K" onClick={() => setMenuOpen(false)}>
+                17K WILD CANYON
+              </Link>
+              <Link to="/TrailDetail33K" onClick={() => setMenuOpen(false)}>
+                33K MOUNTAIN LEGEND
+              </Link>
             </div>
           )}
 
@@ -198,7 +220,9 @@ const Navbar = () => {
             </div>
           )}
 
-          <Link to="/ContactPage">İletişim</Link>
+          <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
+            İletişim
+          </Link>
           <a
             href="https://apphurra.com/etkinlik/karagecit-trail"
             className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 w-full text-center"

@@ -25,7 +25,7 @@ const RaceTrail = () => {
         title="33K MOUNTAIN LEGEND"
         distance="33K"
         elevation="1450m+"
-        backgroundImg="/resim12.JPG"
+        backgroundImg="/resim5.JPG"
         itraImg="/itra2.png"
         utmbImg="/utmb.png"
         extraImg="/itra.png" // 👈 buraya ekledik

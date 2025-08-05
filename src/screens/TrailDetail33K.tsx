@@ -16,15 +16,27 @@ const TrailDetail33K = () => {
         ></iframe>
       </div>
       <div className="flex justify-between gap-4 mb-4">
-        <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+        <a
+          href="/files/33k.kml"
+          download
+          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+        >
           KML
-        </button>
-        <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+        </a>
+        <a
+          href="/files/33k.gpx"
+          download
+          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+        >
           GPX
-        </button>
-        <button className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold">
+        </a>
+        <a
+          href="/files/33k.kmz"
+          download
+          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
+        >
           KMZ
-        </button>
+        </a>
       </div>
       <div className="w-full max-w-4xl text-left">
         <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">

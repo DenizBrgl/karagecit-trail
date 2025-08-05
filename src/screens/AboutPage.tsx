@@ -33,9 +33,8 @@ const AboutPage = () => {
           kendimize ruhsal ve fiziksel anlamda iyi bakmak istememizdir. Birlikte
           olduğumuzda, beraberliğin gücünün farkındayız ve uzun yollarda bu
           bilinçle ilerliyoruz. Günlük hayatın stresiyle başa çıkarken, adım
-          adım ilerlemek bize huzur veriyor. Koşmayı öğrenmek istiyorsanız, tek
-          yapmanız gereken bir adım atmak. Sen yeter ki koşmayı iste, biz
-          buradayız.
+          adım ilerlemek bize huzur veriyor. Bunu istiyorsanız, tek yapmanız
+          gereken bir adım atmak. Sen yeter ki koşmayı iste, biz buradayız.
         </p>
       </div>
     </div>

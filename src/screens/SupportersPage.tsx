@@ -1,7 +1,7 @@
 const sponsors = [
   {
-    name: "Ford",
-    image: "/ford.png",
+    name: "Wrapfinity",
+    image: "/wrap2.png",
     url: "https://www.redbull.com",
   },
   {
@@ -17,7 +17,7 @@ const sponsors = [
   {
     name: "Mersin Üniversitesi",
     image: "/meu.png",
-    url: "https://www.macfit.com.tr",
+    url: "https://www.mersin.edu.tr/",
   },
   {
     name: "Reparo Yoga",
@@ -43,6 +43,11 @@ const sponsors = [
     name: "Türkiye Atletizm Federasyonu",
     image: "/atl.png",
     url: "https://www.macfit.com.tr",
+  },
+  {
+    name: "Sarıgül Mühendislik",
+    image: "/image.png",
+    url: "https://www.sarigulmuhendislik.com/",
   },
 ];
 
