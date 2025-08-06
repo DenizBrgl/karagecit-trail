@@ -2,13 +2,13 @@ const TrailDetail33K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
-        17K WILD CANYON RUN
+        33K MOUNTAIN LEGEND TRAIL
       </h1>
 
       <div className="w-full max-w-4xl text-center mb-6">
         <iframe
           src="https://tracedetrail.fr/en/iframe/6865"
-          title="17K Route"
+          title="33K Route"
           width="100%"
           height="600"
           allowFullScreen
@@ -17,21 +17,21 @@ const TrailDetail33K = () => {
       </div>
       <div className="flex justify-between gap-4 mb-4">
         <a
-          href="/files/33k.kml"
+          href="/files/33K.kml"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           KML
         </a>
         <a
-          href="/files/33k.gpx"
+          href="/files/33K.gpx"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           GPX
         </a>
         <a
-          href="/files/33k.kmz"
+          href="/files/33K.kmz"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >

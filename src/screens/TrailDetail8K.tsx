@@ -16,21 +16,21 @@ const TrailDetail8K = () => {
         ></iframe>
         <div className="flex justify-between gap-4 mb-4 mt-4">
           <a
-            href="/files/8k.kml"
+            href="/files/8K.kml"
             download
             className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
           >
             KML
           </a>
           <a
-            href="/files/8k.gpx"
+            href="/files/8K.gpx"
             download
             className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
           >
             GPX
           </a>
           <a
-            href="/files/8k.kmz"
+            href="/files/8K.kmz"
             download
             className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
           >

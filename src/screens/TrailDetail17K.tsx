@@ -17,21 +17,21 @@ const TrailDetail17K = () => {
       </div>
       <div className="flex justify-between gap-4 mb-4">
         <a
-          href="/files/17k.kml"
+          href="/files/17K.kml"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           KML
         </a>
         <a
-          href="/files/17k.gpx"
+          href="/files/17K.gpx"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           GPX
         </a>
         <a
-          href="/files/17k.kmz"
+          href="/files/17K.kmz"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
