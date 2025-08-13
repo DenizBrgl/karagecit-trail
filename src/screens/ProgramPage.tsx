@@ -24,7 +24,7 @@ const ProgramPage = () => {
               <tbody>
                 <tr className="border-t">
                   <td className="px-4 py-2">Kit Dağıtımı Başlangıç</td>
-                  <td className="px-4 py-2">16:00</td>
+                  <td className="px-4 py-2">17:00</td>
                   <td className="px-4 py-2">Panayır Kafe</td>
                 </tr>
                 <tr className="border-t">
@@ -59,23 +59,35 @@ const ProgramPage = () => {
               <tbody>
                 {[
                   [
-                    "Sayapark Aşağısı Vipol Karşısı- Forum Durağı Karşısı- Eski Devlet Hastanesi ",
+                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (33K için Otobüs Kalkışı)",
                     "05:00",
                     "Mersin",
                   ],
+                  [
+                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (8K & 17K için Otobüs Kalkışı)",
+                    "06:00",
+                    "Mersin",
+                  ],
                   ["Tarsus Şehir Stadyumu", "05.30", "Tarsus"],
-                  ["Karageçit Kit Dağıtımı Başlangıç", "07:00", "Karageçit"],
-                  ["Karageçit Kit Dağıtımı Bitiş", "08:00", "Karageçit"],
-                  ["8K & 17K Geç Kit Dağıtımı", "06:30 – 07:30", "Karageçit"],
-                  ["33K Geç Kit Dağıtımı", "05:30 – 06:30", "Karageçit"],
-                  ["Zumba – Isınma", "08:00", "Yarış Alanı"],
-                  ["🏁 33K Yarış Startı", "07:00", "Başlangıç Noktası"],
-                  ["🏁 8K & 17K Yarış Startı", "08:00", "Başlangıç Noktası"],
+                  [
+                    "33K Geç Kit Dağıtımı (Geç Kit Dağıtımı Olmayacaktır)",
+                    "-",
+                    "Karageçit",
+                  ],
+                  ["8K & 17K Geç Kit Dağıtımı", "07:00 – 08:00", "Karageçit"],
 
+                  ["🏁 33K Yarış Startı", "07:00", "Başlangıç Noktası"],
+                  [
+                    "Zumba – Isınma & 8K-17K Start Hazırlığı",
+                    "08:00 – 08:15",
+                    "Yarış Alanı",
+                  ],
+                  ["🏁 8K & 17K Yarış Startı", "08:15", "Başlangıç Noktası"],
                   ["Yarış Bitişi", "12:30", "Finish Noktası"],
                   ["Paddle Board Keyfi", "13:00", "Kadıncık Barajı"],
-                  ["Ödül Töreni", "13:30", "Sahne Alanı"],
-                  ["Dans Gösterisi & Gösteriler", "14:00", "Festival Alanı"],
+                  ["Ödül Töreni", "14:00", "Sahne Alanı"],
+                  ["Servislerin Ayrılışı (33K)", "15:30", "Karageçit"],
+                  ["Servislerin Ayrılışı (8K & 17K)", "15:30", "Karageçit"],
                 ].map(([etkinlik, saat, yer], i) => (
                   <tr key={i} className="border-t">
                     <td className="px-4 py-2">{etkinlik}</td>

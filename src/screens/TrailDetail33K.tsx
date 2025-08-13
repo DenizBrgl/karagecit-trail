@@ -66,7 +66,7 @@ const TrailDetail33K = () => {
         </p>
         <p className="mb-4">
           Parkurun tamamlanması için yarışmacılara tanınacak olan toplam süre
-          6,5 saattir. 33K Mountain Legend Trail parkurunda 4 adet CP noktası
+          6.5 saattir. 33K Mountain Legend Trail parkurunda 4 adet CP noktası
           bulunmaktadır. Ara noktalarda bulunacak yiyecek ve içecekler sadece
           katılımcıların kullanımı içindir. Çöpler yine buralarda bulunacak çöp
           bidonlarına atılmalıdır.
@@ -90,13 +90,13 @@ const TrailDetail33K = () => {
           <li>Acil durum battaniyesi</li>
           <li>Yağmurluk veya rüzgarlık</li>
           <li>Baf ya da şapka</li>
-          <li>Kafa feneri ve yedek pilleri (çalışır durumda)</li>
           <li>Düdük</li>
           <li>En az 1 L kapasiteli su kabı</li>
           <li>Bardak</li>
-          <li>Sırt çantası</li>
+          <li>Sırt çantası veya Bel Çantası</li>
           <li>Yiyecek</li>
           <li>Zamanlama çipi</li>
+          <li>Sağlık Raporu veya Son 6 ay geçerli sporcu lisansı</li>
         </ul>{" "}
         <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
           GÜVENLİK VE SAĞLIK
@@ -143,10 +143,10 @@ const TrailDetail33K = () => {
           FERAGATNAME
         </h2>
         <p className="mb-4">
-          17K Wild Canyon Run koşusuna kayıt olan katılımcılar, koşu kurallarını
-          ve yapılabilecek değişiklikleri kabul etmiş sayılır. Organizasyon,
-          katılımcıların neden olduğu ya da maruz kaldıkları zararlardan sorumlu
-          tutulamaz.
+          33K Mountain Legend Trail koşusuna kayıt olan katılımcılar, koşu
+          kurallarını ve yapılabilecek değişiklikleri kabul etmiş sayılır.
+          Organizasyon, katılımcıların neden olduğu ya da maruz kaldıkları
+          zararlardan sorumlu tutulamaz.
         </p>
       </div>
     </div>

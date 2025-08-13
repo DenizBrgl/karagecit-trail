@@ -37,7 +37,7 @@ const Navbar = () => {
 
           <div className="relative group">
             <button className="hover:underline">Bilgi Noktası ▾</button>
-            <div className="absolute hidden group-hover:block bg-white text-black mt-2 p-2 shadow rounded z-50 min-w-[10rem]">
+            <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow rounded z-50 min-w-[10rem] mt-0 top-full">
               <Link
                 to="/RulesPage"
                 className="block px-4 py-1 hover:bg-gray-100"
@@ -70,22 +70,22 @@ const Navbar = () => {
 
           <div className="relative group">
             <button className="hover:underline">Parkurlar ▾</button>
-            <div className="absolute hidden group-hover:block bg-white text-black mt-2 p-2 shadow rounded z-50 min-w-[15rem]">
+            <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow rounded z-50 min-w-[10rem] mt-0 top-full">
               <Link
                 to="/TrailDetail8K"
-                className="block px-4 py-1 hover:bg-gray-100"
+                className="block px-4 py-1 hover:bg-gray-300"
               >
                 8K DISCOVERY RUN
               </Link>
               <Link
                 to="/TrailDetail17K"
-                className="block px-4 py-1 hover:bg-gray-100"
+                className="block px-4 py-1 hover:bg-gray-300"
               >
                 17K WILD CANYON
               </Link>
               <Link
                 to="/TrailDetail33K"
-                className="block px-4 py-1 hover:bg-gray-100"
+                className="block px-4 py-1 hover:bg-gray-300"
               >
                 33K MOUNTAIN LEGEND
               </Link>
@@ -104,20 +104,20 @@ const Navbar = () => {
             <div className="absolute hidden group-hover:block bg-white text-black mt-2 p-2 shadow rounded z-50 min-w-[15rem]">
               <Link
                 to="/Results2024"
-                className="block px-4 py-1 hover:bg-gray-100"
+                className="block px-4 py-1 hover:bg-gray-300"
               >
                 2024
               </Link>
               <Link
                 to="/Results2025"
-                className="block px-4 py-1 hover:bg-gray-100"
+                className="block px-4 py-1 hover:bg-gray-300"
               >
                 2025
               </Link>
             </div>
           </div>
 
-          <Link to="/ContactPage" className="block px-4 py-1 hover:bg-gray-100">
+          <Link to="/ContactPage" className="block px-4 py-1 hover:bg-gray-300">
             İletişim
           </Link>
 
@@ -166,19 +166,39 @@ const Navbar = () => {
           </button>
           {openSubmenu === "info" && (
             <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link to="/RulesPage" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/RulesPage"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Genel Kurallar
               </Link>
-              <Link to="/AwardsPage" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/AwardsPage"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Ödüller
               </Link>
-              <Link to="/ProgramPage" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/ProgramPage"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Program
               </Link>
-              <Link to="/AccommodationsPage" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/AccommodationsPage"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Konaklama
               </Link>
-              <Link to="/RunList" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/RunList"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Katılımcı Listesi
               </Link>
             </div>
@@ -192,13 +212,25 @@ const Navbar = () => {
           </button>
           {openSubmenu === "tracks" && (
             <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link to="/TrailDetail8K" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/TrailDetail8K"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 8K DISCOVERY RUN
               </Link>
-              <Link to="/TrailDetail17K" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/TrailDetail17K"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 17K WILD CANYON
               </Link>
-              <Link to="/TrailDetail33K" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/TrailDetail33K"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 33K MOUNTAIN LEGEND
               </Link>
             </div>
@@ -215,8 +247,18 @@ const Navbar = () => {
           </button>
           {openSubmenu === "tracks" && (
             <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link to="/Results2024">2024</Link>
-              <Link to="/Results2025">2025</Link>
+              <Link
+                to="/Results2024"
+                className="block px-4 py-1 hover:bg-gray-300"
+              >
+                2024
+              </Link>
+              <Link
+                to="/Results2025"
+                className="block px-4 py-1 hover:bg-gray-300"
+              >
+                2025
+              </Link>
             </div>
           )}
 

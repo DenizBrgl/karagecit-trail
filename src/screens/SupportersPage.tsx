@@ -5,9 +5,9 @@ const sponsors = [
     url: "https://www.decathlon.com.tr",
   },
   {
-    name: "Mersin BüyükŞehir Belediyesi",
-    image: "/mersin.png",
-    url: "https://www.garmin.com",
+    name: "Heardline",
+    image: "/heardline1.png",
+    url: "https://www.heardline.com",
   },
   {
     name: "Mersin Üniversitesi",
@@ -15,8 +15,8 @@ const sponsors = [
     url: "https://www.mersin.edu.tr/",
   },
   {
-    name: "Wrapfinity",
-    image: "/wrap2.png",
+    name: "Erkan Design",
+    image: "/erkan.jpg",
     url: "https://www.redbull.com",
   },
   {
@@ -35,8 +35,8 @@ const sponsors = [
     url: "https://www.redbull.com",
   },
   {
-    name: "Sapan Gold",
-    image: "/Sapan-GOLD.png",
+    name: "Cezy Yenilebilir Enerji",
+    image: "/cezy.png",
     url: "https://www.decathlon.com.tr",
   },
   {
@@ -54,6 +54,16 @@ const sponsors = [
     image: "/image.png",
     url: "https://www.sarigulmuhendislik.com/",
   },
+  {
+    name: "Makro Sağlıklı Yaşam Merkezi",
+    image: "/makro.png",
+    url: "https://www.makrosaglik.com/",
+  },
+  // {
+  //   name: "Heardline",
+  //   image: "/heardline.png",
+  //   url: "https://www.heardline.com/",
+  // },
 ];
 
 const SupportersPage = () => {

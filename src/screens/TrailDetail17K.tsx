@@ -60,8 +60,9 @@ const TrailDetail17K = () => {
         <p className="mb-4">
           Yarış yaklaşık 800M bir patika yokuşu ile başlar ve barajın serin
           sularına doğru devam eder. Parkurun tamamlanması için yarışmacılara
-          tanınacak olan toplam süre 2 saattir. 17K WILD CANYON RUN parkurunda 2
-          adet CP noktası bulunmaktadır.
+          tanınacak olan toplam süre 3,5 saattir. 17K WILD CANYON RUN parkurunda
+          2 adet CP noktası bulunmaktadır.Dönüşte aynı cp noktasından
+          geçilecektir.Toplamda 3 adet CP noktası bulunmaktadır.
         </p>
         <p className="mb-4">
           Ara noktalarda bulunacak yiyecek ve içecekler sadece katılımcıların
