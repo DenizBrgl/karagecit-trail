@@ -9,6 +9,12 @@ const sponsors = [
     image: "/heardline1.png",
     url: "https://www.heardline.com",
   },
+
+  {
+    name: "Ihlamur Mobilya",
+    image: "/ihlamurhd.png",
+    url: "https://www.mersin.edu.tr/",
+  },
   {
     name: "Mersin Üniversitesi",
     image: "/meu.png",
@@ -40,8 +46,8 @@ const sponsors = [
     url: "https://www.decathlon.com.tr",
   },
   {
-    name: "Akdeniz Belediyesi",
-    image: "/akdeniz.png",
+    name: "Tnc Fitness House",
+    image: "/tnc.jpg",
     url: "https://www.garmin.com",
   },
   {
@@ -59,11 +65,17 @@ const sponsors = [
     image: "/makro.png",
     url: "https://www.makrosaglik.com/",
   },
-  // {
-  //   name: "Heardline",
-  //   image: "/heardline.png",
-  //   url: "https://www.heardline.com/",
-  // },
+  {
+    name: "Asf Logistics",
+    image: "/asf.png",
+    url: "https://www.heardline.com/",
+  },
+
+  {
+    name: "Gümsan Global Gümrük Müşavirliği",
+    image: "/gumsan.png",
+    url: "https://www.gumsan.com/",
+  },
 ];
 
 const SupportersPage = () => {
