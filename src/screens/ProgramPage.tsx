@@ -25,12 +25,17 @@ const ProgramPage = () => {
                 <tr className="border-t">
                   <td className="px-4 py-2">Kit Dağıtımı Başlangıç</td>
                   <td className="px-4 py-2">17:00</td>
-                  <td className="px-4 py-2">Panayır Kafe</td>
+                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
+                </tr>
+                      <tr className="border-t">
+                  <td className="px-4 py-2">Dj Etkinliği</td>
+                  <td className="px-4 py-2">18.00-19.30</td>
+                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-2">Kit Dağıtımı Bitiş</td>
                   <td className="px-4 py-2">20:00</td>
-                  <td className="px-4 py-2">Panayır Kafe</td>
+                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
                 </tr>
               </tbody>
             </table>
