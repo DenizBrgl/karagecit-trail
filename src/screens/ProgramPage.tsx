@@ -9,7 +9,7 @@ const ProgramPage = () => {
         {/* 30 Ağustos Cumartesi */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            30 AĞUSTOS 2025 CUMARTESİ
+            21 HAZİRAN 2026 CUMARTESİ
           </h2>
 
           <div className="overflow-x-auto">

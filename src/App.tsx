@@ -18,24 +18,25 @@ import SupportersPage from "./screens/SupportersPage";
 import AccommodationsPage from "./screens/AccommodationsPage";
 
 const slides = [
+    {
+    img: "/bora3.jpg",
+    title: "Sınırlarını Zorla",
+    subtitle: "Her adımda özgürlük!",
+  },
   {
-    img: "/resim.jpg",
+    img: "/bora6.jpg",
     title: "Doğanın Kalbinde",
     subtitle: "Muhteşem Bir Rota!",
   },
 
   {
-    img: "/resim2.jpg",
-    title: "Koşuya Hazır mısın?",
+    img: "/bora4.jpg",
+    title: "Kendini Serin Sulara Bırak",
     subtitle: "Adım adım zirveye!",
   },
+
   {
-    img: "/resim8.JPG",
-    title: "Sınırlarını Zorla",
-    subtitle: "Her adımda özgürlük!",
-  },
-  {
-    img: "/resim3.jpg",
+    img: "/bora2.jpg",
     title: "Karageçit Seni Bekliyor",
     subtitle: "Patikaların ruhunu hisset!",
   },

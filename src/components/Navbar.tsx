@@ -93,7 +93,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="https://drive.google.com/drive/folders/1PHkNfhQnJfdKLmNJKf9zh0rsG0AHA5s9"
+            href="https://drive.google.com/drive/folders/1xKm03qS4rADKACwo5nwiOFOcvZGfTrFU?sort=13&direction=a&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnaY2PlZ1XUbfG8KF5k3xMPsU1El400P_49AqsBTiLfGywc0t-3AlbudbyaU0_aem_RAnYldOoETldG5rRQF0z7A"
             className="hover:underline"
           >
             Galeri

@@ -16,7 +16,7 @@ const courses = [
     image: "/17k.jpg",
   },
   {
-    km: "33K",
+    km: "50K",
     elevation: "1685m+",
     title: "MOUNTAIN LEGEND",
     tag: "Ultra",

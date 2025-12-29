@@ -9,12 +9,6 @@ const sponsors = [
     image: "/heardline1.png",
     url: "https://www.heardline.com",
   },
-
-  {
-    name: "Ihlamur Mobilya",
-    image: "/ihlamurhd.png",
-    url: "https://www.mersin.edu.tr/",
-  },
   {
     name: "Mersin Üniversitesi",
     image: "/meu.png",

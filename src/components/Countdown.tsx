@@ -8,7 +8,7 @@ type TimeLeft = {
 
 const Countdown = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const targetDate = new Date("2025-08-31T00:00:00");
+    const targetDate = new Date("2026-06-21T00:00:00");
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
 
