@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
@@ -7,9 +8,34 @@ const Navbar = () => {
   const toggleSubmenu = (key: string) => {
     setOpenSubmenu(openSubmenu === key ? null : key);
   };
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    handleScroll(); // ilk render'da da hesaplasın
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+  const [forceYellow, setForceYellow] = useState(false);
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setForceYellow(true);
+    }
+  }, [location.pathname]);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent shadow-md">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 shadow-md transition-colors duration-300 ${
+        isHome ? (scrolled ? "bg-[#fbbf24]" : "bg-transparent") : "bg-[#fbbf24]"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -17,13 +43,15 @@ const Navbar = () => {
             <img
               src="/logo_bg.png"
               alt="Karageçit Trail Logo"
-              className="h-24 w-auto cursor-pointer"
+              className={`w-auto cursor-pointer transition-all duration-300 ${
+                forceYellow ? "h-20" : "h-24"
+              }`}
             />
           </Link>
         </div>
 
         {/* Masaüstü Menü */}
-        <div className="hidden md:flex items-center bg-[#fbbf24] rounded-full px-6 py-2 shadow-md font-semibold text-white text-sm md:text-base space-x-5 ml-4">
+        <div className="hidden md:flex items-center rounded-full bg-[#fbbf24] px-6 py-2 font-semibold text-white text-sm md:text-base space-x-5 ml-4 shadow-md">
           <Link
             to="/"
             className="bg-black text-white px-4 py-1 rounded-md font-bold"
@@ -91,13 +119,9 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-
-          <a
-            href="https://drive.google.com/drive/folders/1xKm03qS4rADKACwo5nwiOFOcvZGfTrFU?sort=13&direction=a&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnaY2PlZ1XUbfG8KF5k3xMPsU1El400P_49AqsBTiLfGywc0t-3AlbudbyaU0_aem_RAnYldOoETldG5rRQF0z7A"
-            className="hover:underline"
-          >
+          <Link to="/Gallery" className="block px-4 py-1 hover:bg-gray-300">
             Galeri
-          </a>
+          </Link>
 
           <div className="relative group">
             <button className="hover:underline">Sonuçlar ▾</button>

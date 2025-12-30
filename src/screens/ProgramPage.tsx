@@ -25,27 +25,33 @@ const ProgramPage = () => {
                 <tr className="border-t">
                   <td className="px-4 py-2">Kit Dağıtımı Başlangıç</td>
                   <td className="px-4 py-2">17:00</td>
-                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
+                  <td className="px-4 py-2">
+                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
+                  </td>
                 </tr>
-                      <tr className="border-t">
+                <tr className="border-t">
                   <td className="px-4 py-2">Dj Etkinliği</td>
                   <td className="px-4 py-2">18.00-19.30</td>
-                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
+                  <td className="px-4 py-2">
+                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-2">Kit Dağıtımı Bitiş</td>
                   <td className="px-4 py-2">20:00</td>
-                  <td className="px-4 py-2">Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)</td>
+                  <td className="px-4 py-2">
+                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        {/* 31 Ağustos Pazar */}
+        {/* 21 Haziran Pazar */}
         <div>
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            31 AĞUSTOS 2025 PAZAR
+            21 Haziran 2026 PAZAR
           </h2>
 
           <p className="text-center text-md text-gray-700 mb-6 italic">

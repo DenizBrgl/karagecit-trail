@@ -51,7 +51,7 @@ const TrailDetail8K = () => {
           olacaktır.
         </p>
         <p className="mb-4">
-          31 Ağustos Pazar sabahı saat 09.00‘da baraj köprüsünden start alacak,
+          21 Haziran Pazar sabahı saat 09.00‘da baraj köprüsünden start alacak,
           ilk CP noktasından geri dönüş olacak şekilde aynı yerde finish
           yapacaktır.
         </p>
@@ -127,7 +127,7 @@ const TrailDetail8K = () => {
           <li>Yaş Kategorileri: 40-, 40-49, 50+</li>
         </ul>
         <p className="mb-4">
-          Ödül töreni 31 Ağustos 2025 Pazar günü saat 13.30’da Karageçit
+          Ödül töreni 21 Haziran 2026 Pazar günü saat 13.30’da Karageçit
           festival alanında yapılacaktır.
         </p>
 

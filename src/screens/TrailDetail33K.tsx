@@ -49,7 +49,7 @@ const TrailDetail33K = () => {
           geçmesinden dolayı hissedilen zorluk seviyesi yüksek olacaktır.
         </p>
         <p className="mb-4">
-          31 Ağustos Pazar sabahı saat 07.00‘da baraj köprüsünden start alacak,
+          21 Haziran Pazar sabahı saat 07.00‘da baraj köprüsünden start alacak,
           ilk CP noktasından bir tırmanışla devam edecektir
         </p>
         <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
@@ -128,7 +128,7 @@ const TrailDetail33K = () => {
           <li>Yaş Kategorileri: 40-, 40-49, 50+</li>
         </ul>
         <p className="mb-4">
-          Ödül töreni 31 Ağustos 2025 Pazar günü saat 13.30’da Karageçit
+          Ödül töreni 21 Haziran 2026 Pazar günü saat 13.30’da Karageçit
           festival alanında yapılacaktır.
         </p>
         <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">

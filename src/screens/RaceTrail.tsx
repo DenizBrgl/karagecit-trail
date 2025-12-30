@@ -4,10 +4,10 @@ const RaceTrail = () => {
   return (
     <div className="w-full py-10 px-4 flex flex-wrap justify-center gap-6 bg-white">
       <TrailCard
-        title="8K DISCOVERY"
+        title="8K DISCOVERY RUN"
         distance="8K"
         elevation="350m+"
-        backgroundImg="/resim13.jpg"
+        backgroundImg="/bora2.jpg"
         itraImg="/itra0.png"
         utmbImg="/utmb.png"
         extraImg="/itra.png" // 👈 buraya ekledik
@@ -16,7 +16,16 @@ const RaceTrail = () => {
         title="15K WILD CANYON"
         distance="15K"
         elevation="736m+"
-        backgroundImg="/resim10.jpg"
+        backgroundImg="/resim.jpg"
+        itraImg="/itra0.png"
+        utmbImg="/utmb.png"
+        extraImg="/itra.png" // 👈 buraya ekledik
+      />
+      <TrailCard
+        title="38K GAME CHANGER"
+        distance="38K"
+        elevation="736m+"
+        backgroundImg="/bora5.jpg"
         itraImg="/itra0.png"
         utmbImg="/utmb.png"
         extraImg="/itra.png" // 👈 buraya ekledik

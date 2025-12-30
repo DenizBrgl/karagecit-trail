@@ -16,9 +16,11 @@ import AwardsPage from "./screens/AwardsPage";
 import { useState, useEffect } from "react";
 import SupportersPage from "./screens/SupportersPage";
 import AccommodationsPage from "./screens/AccommodationsPage";
+import Gallery from "./screens/Gallery";
+import ContactSection from "./screens/ContactSection";
 
 const slides = [
-    {
+  {
     img: "/bora3.jpg",
     title: "Sınırlarını Zorla",
     subtitle: "Her adımda özgürlük!",
@@ -96,6 +98,7 @@ const Home = () => {
       <Countdown />
       <RaceTrail />
       <SupportersPage />
+      <ContactSection></ContactSection>
     </>
   );
 };
@@ -117,6 +120,8 @@ function App() {
         <Route path="/RulesPage" element={<RulesPage />} />
         <Route path="/ProgramPage" element={<ProgramPage />} />
         <Route path="/AwardsPage" element={<AwardsPage />} />
+        <Route path="/Gallery" element={<Gallery />} />
+
         <Route path="/AccommodationsPage" element={<AccommodationsPage />} />
       </Routes>
     </BrowserRouter>
