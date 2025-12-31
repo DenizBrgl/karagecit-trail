@@ -8,7 +8,7 @@ const Navbar = () => {
   const toggleSubmenu = (key: string) => {
     setOpenSubmenu(openSubmenu === key ? null : key);
   };
-  const [scrolled, setScrolled] = useState(false);
+  const [, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -169,7 +169,7 @@ const Navbar = () => {
         <div className="bg-[#fbbf24] w-full flex flex-col items-start px-6 py-4 space-y-3 text-white font-semibold text-base md:hidden">
           <Link
             to="/"
-            className="bg-black text-white px-4 py-1 rounded-md font-bold w-full text-center"
+            className="bg-gray-500 text-white px-4 py-1 rounded-md font-bold w-full text-center"
             onClick={() => setMenuOpen(false)}
           >
             Anasayfa
@@ -280,7 +280,7 @@ const Navbar = () => {
           </Link>
           <a
             href="https://apphurra.com/etkinlik/karagecit-trail"
-            className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 w-full text-center"
+            className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-800 w-full text-center"
           >
             Kayıt Ol
           </a>
