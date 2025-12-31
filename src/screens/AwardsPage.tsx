@@ -18,7 +18,7 @@ const AwardsPage = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-800 opacity-80"></div>
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Durma Harekete Geç
@@ -38,16 +38,16 @@ const AwardsPage = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Card 1 */}
           <div className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4">
-            <FaTshirt className="text-4xl text-orange-500 mt-1" />
+            <FaTshirt className="text-4xl text-gray-500 mt-1" />
             <div>
               <h3 className="font-bold text-xl mb-2">Katılım Tişörtü</h3>
-              <p>Kaydını tamamlayan her katılımcıya hatıra tişört verilir.</p>
+              <p>Kaydını tamamlayan her katılımcıya hatıra tişört, yarış kiti çantası ve çeşitli hediyeler verilir.</p>
             </div>
           </div>
 
           {/* Card 2 */}
           <div className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4">
-            <FaMedal className="text-4xl text-yellow-500 mt-1" />
+            <FaMedal className="text-4xl text-black-500 mt-1" />
             <div>
               <h3 className="font-bold text-xl mb-2">Madalya</h3>
               <p>Yarışı başarıyla tamamlayan her sporcumuza madalya verilir.</p>
@@ -84,7 +84,7 @@ const AwardsPage = () => {
             <div>
               <h3 className="font-bold text-xl mb-2">Genel Klasman Kupaları</h3>
               <p>
-                8K, 17K, 33K parkurlarında kadın ve erkek ilk 3'e kupa verilir.
+                8K, 15K, 38K, 50K parkurlarında kadın ve erkek ilk 3'e kupa verilir.
               </p>
             </div>
           </div>

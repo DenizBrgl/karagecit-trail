@@ -9,7 +9,7 @@ const ProgramPage = () => {
         {/* 30 Ağustos Cumartesi */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            21 HAZİRAN 2026 CUMARTESİ
+            20 HAZİRAN 2026 CUMARTESİ
           </h2>
 
           <div className="overflow-x-auto">
@@ -30,7 +30,7 @@ const ProgramPage = () => {
                   </td>
                 </tr>
                 <tr className="border-t">
-                  <td className="px-4 py-2">Dj Etkinliği</td>
+                  <td className="px-4 py-2">Dj Etkinliği Ve Makarna Partisi</td>
                   <td className="px-4 py-2">18.00-19.30</td>
                   <td className="px-4 py-2">
                     Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
@@ -49,9 +49,9 @@ const ProgramPage = () => {
         </div>
 
         {/* 21 Haziran Pazar */}
-        <div>
+    <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            21 Haziran 2026 PAZAR
+            21 HAZİRAN 2026 PAZAR
           </h2>
 
           <p className="text-center text-md text-gray-700 mb-6 italic">
@@ -70,26 +70,24 @@ const ProgramPage = () => {
               <tbody>
                 {[
                   [
-                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (33K için Otobüs Kalkışı)",
-                    "05:00",
+                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (38K ve 50K için Otobüs Kalkışı)",
+                    "04:00",
                     "Mersin",
                   ],
                   [
-                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (8K & 17K için Otobüs Kalkışı)",
+                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (8K & 15K için Otobüs Kalkışı)",
                     "06:00",
                     "Mersin",
                   ],
                   ["Tarsus Şehir Stadyumu", "05.30", "Tarsus"],
                   [
-                    "33K Geç Kit Dağıtımı (Geç Kit Dağıtımı Olmayacaktır)",
-                    "-",
-                    "Karageçit",
+                    "38K ve 50K Geç Kit Dağıtımı ","05:00 – 06:00", "Karageçit",
                   ],
-                  ["8K & 17K Geç Kit Dağıtımı", "07:00 – 08:00", "Karageçit"],
+                  ["8K & 15K Geç Kit Dağıtımı", "07:00 – 08:00", "Karageçit"],
 
-                  ["🏁 33K Yarış Startı", "07:00", "Başlangıç Noktası"],
+                  ["🏁 38K ve 50K Yarış Startı", "06:00", "Başlangıç Noktası"],
                   [
-                    "Zumba – Isınma & 8K-17K Start Hazırlığı",
+                    "Zumba – Isınma & 8K-15K Start Hazırlığı",
                     "08:00 – 08:15",
                     "Yarış Alanı",
                   ],

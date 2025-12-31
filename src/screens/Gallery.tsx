@@ -30,7 +30,7 @@ const Gallery = () => {
       {/* üst boşluk: navbar sabit olduğu için */}
       <div className="pt-28 pb-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-semibold text-red-600 mb-10">
+          <h1 className="text-4xl text-center md:text-5xl font-semibold text-red-600 mb-10">
             Fotoğraflar
           </h1>
 
@@ -49,16 +49,13 @@ const Gallery = () => {
                   loading="lazy"
                 />
 
-                {/* Hafif koyu katman (okunurluk için) */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/15 transition-colors" />
+           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 transition-colors duration-300" />
 
-                {/* Yıl butonu (görseldeki gibi altta ortada) */}
-                <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-3 bg-red-600 text-white font-bold px-7 py-2 rounded-md shadow-md">
-                    <span className="text-xl tracking-wide">{c.year}</span>
-                    <span className="text-2xl leading-none">›</span>
-                  </div>
-                </div>
+<div className="absolute inset-0 flex items-center justify-center">
+  <div className="flex items-center gap-3 bg-red-600/90 backdrop-blur text-white font-bold px-8 py-3 rounded-md shadow-lg group-hover:scale-105 transition-transform">
+    <span className="text-2xl tracking-wide">{c.year}</span>
+  </div>
+</div>
               </Link>
             ))}
           </div>

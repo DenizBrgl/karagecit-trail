@@ -11,13 +11,13 @@ const RunList = () => {
           <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
             8K - Discovery Run Katılımcı Listesi
           </h2>
-          <iframe
+          {/* <iframe
             src="https://apphurra.com/etkinlikkatilimcilar/liste/1096/tr/0"
             width="100%"
             height="600"
             className="border border-gray-300 rounded"
             title="8K Katılımcılar"
-          ></iframe>
+          ></iframe> */}
         </div>
 
         {/* 17K Katılımcılar */}
@@ -25,27 +25,39 @@ const RunList = () => {
           <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
             15K - Wild Canyon Run Katılımcı Listesi
           </h2>
-          <iframe
+          {/* <iframe
             src="https://apphurra.com/etkinlikkatilimcilar/liste/1097/tr/0"
             width="100%"
             height="600"
             className="border border-gray-300 rounded"
             title="17K Katılımcılar"
-          ></iframe>
+          ></iframe> */}
         </div>
 
         {/* 33K Katılımcılar */}
         <div>
           <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
-            33K - Mountain Legend Trail Katılımcı Listesi
+            38K - Game Changer Trail Katılımcı Listesi
           </h2>
-          <iframe
+          {/* <iframe
             src="https://apphurra.com/etkinlikkatilimcilar/liste/1098/tr/0"
             width="100%"
             height="600"
             className="border border-gray-300 rounded"
             title="33K Katılımcılar"
-          ></iframe>
+          ></iframe> */}
+        </div>
+          <div>
+          <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
+            50K - Mountain Legend Trail Katılımcı Listesi
+          </h2>
+          {/* <iframe
+            src="https://apphurra.com/etkinlikkatilimcilar/liste/1098/tr/0"
+            width="100%"
+            height="600"
+            className="border border-gray-300 rounded"
+            title="50K Katılımcılar"
+          ></iframe> */}
         </div>
       </div>
     </div>

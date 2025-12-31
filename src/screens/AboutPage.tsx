@@ -10,7 +10,7 @@ const AboutPage = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-400 opacity-80"></div>
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Durma Harekete Geç
@@ -35,8 +35,11 @@ const AboutPage = () => {
           bilinçle ilerliyoruz. Günlük hayatın stresiyle başa çıkarken, adım
           adım ilerlemek bize huzur veriyor. Bunu istiyorsanız, tek yapmanız
           gereken bir adım atmak. Sen yeter ki koşmayı iste, biz buradayız.
+          
         </p>
-      </div>
+  <h2 className="text-xl md:text-xl font-bold text-[#1a237e] mt-6 relative inline-block">
+          <span className="border-m-4 border-[#fbbf24] pm-2">Akdeniz Running Spor Kulübü</span>
+        </h2>      </div>
     </div>
   );
 };

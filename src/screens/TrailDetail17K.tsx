@@ -2,7 +2,7 @@ const TrailDetail17K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
-        17K WILD CANYON RUN
+        15K WILD CANYON RUN
       </h1>
 
       <div className="w-full max-w-4xl text-center mb-6">

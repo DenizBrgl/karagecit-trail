@@ -1,14 +1,14 @@
-const TrailDetail33K = () => {
+const TrailDetail38K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
-        33K MOUNTAIN LEGEND TRAIL
+        38K MOUNTAIN LEGEND TRAIL
       </h1>
 
       <div className="w-full max-w-4xl text-center mb-6">
         <iframe
           src="https://tracedetrail.fr/en/iframe/6865"
-          title="33K Route"
+          title="38K Route"
           width="100%"
           height="600"
           allowFullScreen
@@ -17,21 +17,21 @@ const TrailDetail33K = () => {
       </div>
       <div className="flex justify-between gap-4 mb-4">
         <a
-          href="/files/33K.kml"
+          href="/files/38K.kml"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           KML
         </a>
         <a
-          href="/files/33K.gpx"
+          href="/files/38K.gpx"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           GPX
         </a>
         <a
-          href="/files/33K.kmz"
+          href="/files/38K.kmz"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
@@ -43,20 +43,20 @@ const TrailDetail33K = () => {
           PARKUR BİLGİSİ
         </h2>
         <p className="mb-4">
-          Yaklaşık uzunluğu 33 km ve 1150 yükseklik kazanımı olan 33K MOUNTAIN
+          Yaklaşık uzunluğu 38 km ve 1150 yükseklik kazanımı olan 38K MOUNTAIN
           LEGEND TRAIL parkuru %60 patika, %40 single trackten oluşmaktadır.
           Yarış genelinin iniş ve çıkış patikaları ve 1450 metrenin üzerinde
           geçmesinden dolayı hissedilen zorluk seviyesi yüksek olacaktır.
         </p>
         <p className="mb-4">
-          21 Haziran Pazar sabahı saat 07.00‘da baraj köprüsünden start alacak,
+          21 Haziran Pazar sabahı saat 06.00‘da baraj köprüsünden start alacak,
           ilk CP noktasından bir tırmanışla devam edecektir
         </p>
         <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
           PARKUR VE CP NOKTASI
         </h2>
         <p className="mb-4">
-          33K Mountain Legend Trail Parkuru, doğanın eşsiz güzellikleri
+          38K Mountain Legend Trail Parkuru, doğanın eşsiz güzellikleri
           eşliğinde zorlu ve heyecan dolu bir macera sunuyor. Yarış, 200
           metrelik bir patika tırmanışıyla başlıyor ve ardından barajın serin
           sularına doğru devam eden etkileyici bir rota sunuyor. Bin yıllık
@@ -143,7 +143,7 @@ const TrailDetail33K = () => {
           FERAGATNAME
         </h2>
         <p className="mb-4">
-          33K Mountain Legend Trail koşusuna kayıt olan katılımcılar, koşu
+          38K Mountain Legend Trail koşusuna kayıt olan katılımcılar, koşu
           kurallarını ve yapılabilecek değişiklikleri kabul etmiş sayılır.
           Organizasyon, katılımcıların neden olduğu ya da maruz kaldıkları
           zararlardan sorumlu tutulamaz.
@@ -153,4 +153,4 @@ const TrailDetail33K = () => {
   );
 };
 
-export default TrailDetail33K;
+export default TrailDetail38K;

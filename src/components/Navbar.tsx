@@ -31,9 +31,14 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 shadow-md transition-colors duration-300 ${
-        isHome ? (scrolled ? "bg-[#fbbf24]" : "bg-transparent") : "bg-[#fbbf24]"
+    // <header
+    //   className={`fixed top-0 left-0 w-full z-50 shadow-md transition-colors duration-300 ${
+    //     isHome ? (scrolled ? "bg-[#fbbf24]" : "bg-transparent") : "bg-[#fbbf24]"
+    //   }`}
+    // >
+         <header
+      className={`fixed top-0 left-0 w-full z-50  transition-colors duration-300 ${
+        isHome ? ("bg-transparent") : "bg-[#fbbf24]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -54,7 +59,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center rounded-full bg-[#fbbf24] px-6 py-2 font-semibold text-white text-sm md:text-base space-x-5 ml-4 shadow-md">
           <Link
             to="/"
-            className="bg-black text-white px-4 py-1 rounded-md font-bold"
+            className="bg-gray-600 text-white px-4 py-1 rounded-md font-bold"
           >
             Anasayfa
           </Link>
@@ -103,19 +108,25 @@ const Navbar = () => {
                 to="/TrailDetail8K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
-                8K DISCOVERY RUN
+                8K Discovery Run
               </Link>
               <Link
                 to="/TrailDetail17K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
-                17K WILD CANYON
+                15K Wild Canyon Run
               </Link>
               <Link
-                to="/TrailDetail33K"
+                to="/TrailDetail38K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
-                33K MOUNTAIN LEGEND
+                38K Mountain Legend
+              </Link>
+                <Link
+                to="/TrailDetail50K"
+                className="block px-4 py-1 hover:bg-gray-300"
+              >
+                50K Ultra Challenge
               </Link>
             </div>
           </div>
@@ -123,23 +134,12 @@ const Navbar = () => {
             Galeri
           </Link>
 
-          <div className="relative group">
-            <button className="hover:underline">Sonuçlar ▾</button>
-            <div className="absolute hidden group-hover:block bg-white text-black mt-2 p-2 shadow rounded z-50 min-w-[15rem]">
-              <Link
-                to="/Results2024"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                2024
-              </Link>
-              <Link
-                to="/Results2025"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                2025
-              </Link>
-            </div>
-          </div>
+        <div className="relative group">
+  <Link to="/Results" className="hover:underline">
+    Sonuçlar
+  </Link>
+</div>
+
 
           <Link to="/ContactPage" className="block px-4 py-1 hover:bg-gray-300">
             İletişim
@@ -147,7 +147,7 @@ const Navbar = () => {
 
           <a
             href="https://apphurra.com/etkinlik/karagecit-trail"
-            className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800"
+            className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-800"
           >
             Kayıt Ol
           </a>
@@ -248,14 +248,21 @@ const Navbar = () => {
                 className="block px-4 py-1 hover:bg-gray-300"
                 onClick={() => setMenuOpen(false)}
               >
-                17K WILD CANYON
+                15K WILD CANYON
               </Link>
               <Link
-                to="/TrailDetail33K"
+                to="/TrailDetail38K"
                 className="block px-4 py-1 hover:bg-gray-300"
                 onClick={() => setMenuOpen(false)}
               >
-                33K MOUNTAIN LEGEND
+                38K MOUNTAIN LEGEND
+              </Link>
+                <Link
+                to="/TrailDetail50K"
+                className="block px-4 py-1 hover:bg-gray-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                50K ULTRA CHALLENGE
               </Link>
             </div>
           )}
@@ -263,28 +270,10 @@ const Navbar = () => {
           <a href="https://drive.google.com/drive/folders/1PHkNfhQnJfdKLmNJKf9zh0rsG0AHA5s9">
             Galeri
           </a>
-          <button
-            onClick={() => toggleSubmenu("tracks")}
-            className="w-full text-left"
-          >
-            Sonuçlar ▾
-          </button>
-          {openSubmenu === "tracks" && (
-            <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link
-                to="/Results2024"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                2024
-              </Link>
-              <Link
-                to="/Results2025"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                2025
-              </Link>
-            </div>
-          )}
+   <Link to="/Results" onClick={() => setMenuOpen(false)}>
+  Sonuçlar
+</Link>
+
 
           <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
             İletişim
