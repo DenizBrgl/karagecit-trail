@@ -4,7 +4,6 @@ import Countdown from "./components/Countdown";
 import RaceTrail from "./screens/RaceTrail";
 import TrailDetail8K from "./screens/TrailDetail8K";
 import TrailDetail17K from "./screens/TrailDetail17K";
-import TrailDetail33K from "./screens/TrailDetail38K";
 import ContactPage from "./screens/ContactPage";
 import AboutPage from "./screens/AboutPage";
 import Results2024 from "./screens/Results2024";
@@ -19,8 +18,8 @@ import AccommodationsPage from "./screens/AccommodationsPage";
 import Gallery from "./screens/Gallery";
 import ContactSection from "./screens/ContactSection";
 import Results from "./screens/Results";
-import TrailDetail38K from "./screens/TrailDetail38K";
 import TrailDetail50K from "./screens/TrailDetail50K";
+import TrailDetail30K from "./screens/TrailDetail30K";
 
 const slides = [
   {
@@ -114,7 +113,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/TrailDetail8K" element={<TrailDetail8K />} />
         <Route path="/TrailDetail17K" element={<TrailDetail17K />} />
-        <Route path="/TrailDetail38K" element={<TrailDetail38K />} />
+        <Route path="/TrailDetail30K" element={<TrailDetail30K />} />
         <Route path="/TrailDetail50K" element={<TrailDetail50K />} />
 
         <Route path="/ContactPage" element={<ContactPage />} />

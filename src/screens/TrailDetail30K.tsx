@@ -1,14 +1,14 @@
-const TrailDetail38K = () => {
+const TrailDetail30K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
-        38K MOUNTAIN LEGEND TRAIL
+        30K MOUNTAIN LEGEND TRAIL
       </h1>
 
       <div className="w-full max-w-4xl text-center mb-6">
         <iframe
-          src="https://tracedetrail.fr/en/iframe/6865"
-          title="38K Route"
+          src="https://tracedetrail.fr/en/iframe/8305"
+          title="30K Route"
           width="100%"
           height="600"
           allowFullScreen
@@ -17,21 +17,21 @@ const TrailDetail38K = () => {
       </div>
       <div className="flex justify-between gap-4 mb-4">
         <a
-          href="/files/38K.kml"
+          href="/files/30K.kml"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           KML
         </a>
         <a
-          href="/files/38K.gpx"
+          href="/files/30K.gpx"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           GPX
         </a>
         <a
-          href="/files/38K.kmz"
+          href="/files/30K.kmz"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
@@ -43,7 +43,7 @@ const TrailDetail38K = () => {
           PARKUR BİLGİSİ
         </h2>
         <p className="mb-4">
-          Yaklaşık uzunluğu 38 km ve 1150 yükseklik kazanımı olan 38K MOUNTAIN
+          Yaklaşık uzunluğu 30 km ve 1150 yükseklik kazanımı olan 30K MOUNTAIN
           LEGEND TRAIL parkuru %60 patika, %40 single trackten oluşmaktadır.
           Yarış genelinin iniş ve çıkış patikaları ve 1450 metrenin üzerinde
           geçmesinden dolayı hissedilen zorluk seviyesi yüksek olacaktır.
@@ -56,7 +56,7 @@ const TrailDetail38K = () => {
           PARKUR VE CP NOKTASI
         </h2>
         <p className="mb-4">
-          38K Mountain Legend Trail Parkuru, doğanın eşsiz güzellikleri
+          30K Mountain Legend Trail Parkuru, doğanın eşsiz güzellikleri
           eşliğinde zorlu ve heyecan dolu bir macera sunuyor. Yarış, 200
           metrelik bir patika tırmanışıyla başlıyor ve ardından barajın serin
           sularına doğru devam eden etkileyici bir rota sunuyor. Bin yıllık
@@ -66,7 +66,7 @@ const TrailDetail38K = () => {
         </p>
         <p className="mb-4">
           Parkurun tamamlanması için yarışmacılara tanınacak olan toplam süre
-          6.5 saattir. 33K Mountain Legend Trail parkurunda 4 adet CP noktası
+          6.5 saattir. 30K Mountain Legend Trail parkurunda 4 adet CP noktası
           bulunmaktadır. Ara noktalarda bulunacak yiyecek ve içecekler sadece
           katılımcıların kullanımı içindir. Çöpler yine buralarda bulunacak çöp
           bidonlarına atılmalıdır.
@@ -143,7 +143,7 @@ const TrailDetail38K = () => {
           FERAGATNAME
         </h2>
         <p className="mb-4">
-          38K Mountain Legend Trail koşusuna kayıt olan katılımcılar, koşu
+          30K Mountain Legend Trail koşusuna kayıt olan katılımcılar, koşu
           kurallarını ve yapılabilecek değişiklikleri kabul etmiş sayılır.
           Organizasyon, katılımcıların neden olduğu ya da maruz kaldıkları
           zararlardan sorumlu tutulamaz.
@@ -153,4 +153,4 @@ const TrailDetail38K = () => {
   );
 };
 
-export default TrailDetail38K;
+export default TrailDetail30K;

@@ -49,7 +49,7 @@ const ProgramPage = () => {
         </div>
 
         {/* 21 Haziran Pazar */}
-    <div className="mb-16">
+        <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
             21 HAZİRAN 2026 PAZAR
           </h2>
@@ -70,7 +70,7 @@ const ProgramPage = () => {
               <tbody>
                 {[
                   [
-                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (38K ve 50K için Otobüs Kalkışı)",
+                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (30K ve 50K için Otobüs Kalkışı)",
                     "04:00",
                     "Mersin",
                   ],
@@ -81,11 +81,13 @@ const ProgramPage = () => {
                   ],
                   ["Tarsus Şehir Stadyumu", "05.30", "Tarsus"],
                   [
-                    "38K ve 50K Geç Kit Dağıtımı ","05:00 – 06:00", "Karageçit",
+                    "30K ve 50K Geç Kit Dağıtımı ",
+                    "05:00 – 06:00",
+                    "Karageçit",
                   ],
                   ["8K & 15K Geç Kit Dağıtımı", "07:00 – 08:00", "Karageçit"],
 
-                  ["🏁 38K ve 50K Yarış Startı", "06:00", "Başlangıç Noktası"],
+                  ["🏁 30K ve 50K Yarış Startı", "06:00", "Başlangıç Noktası"],
                   [
                     "Zumba – Isınma & 8K-15K Start Hazırlığı",
                     "08:00 – 08:15",

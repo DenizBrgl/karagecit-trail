@@ -39,8 +39,9 @@ const RulesPage = () => {
               <strong>feragatname</strong> sunulması zorunludur.
             </li>
             <li>
-              <strong>15K – Wild Canyon Run</strong> {" "}
-              <strong>38K – Game Changer Trail:</strong> ve {" "} <strong>50K - Mountain Legend Trail</strong> {" "}
+              <strong>15K – Wild Canyon Run</strong>{" "}
+              <strong>30K – Game Changer Trail:</strong> ve{" "}
+              <strong>50K - Mountain Legend Trail</strong>{" "}
               <strong>18 yaş altı katılım kabul edilmez</strong>.
             </li>
           </ul>

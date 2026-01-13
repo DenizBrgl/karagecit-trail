@@ -37,7 +37,7 @@ const RunList = () => {
         {/* 33K Katılımcılar */}
         <div>
           <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
-            38K - Game Changer Trail Katılımcı Listesi
+            30K - Game Changer Trail Katılımcı Listesi
           </h2>
           {/* <iframe
             src="https://apphurra.com/etkinlikkatilimcilar/liste/1098/tr/0"
@@ -47,7 +47,7 @@ const RunList = () => {
             title="33K Katılımcılar"
           ></iframe> */}
         </div>
-          <div>
+        <div>
           <h2 className="text-2xl font-semibold text-[#000000] mb-4 text-center">
             50K - Mountain Legend Trail Katılımcı Listesi
           </h2>

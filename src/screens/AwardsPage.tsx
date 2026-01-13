@@ -41,7 +41,10 @@ const AwardsPage = () => {
             <FaTshirt className="text-4xl text-gray-500 mt-1" />
             <div>
               <h3 className="font-bold text-xl mb-2">Katılım Tişörtü</h3>
-              <p>Kaydını tamamlayan her katılımcıya hatıra tişört, yarış kiti çantası ve çeşitli hediyeler verilir.</p>
+              <p>
+                Kaydını tamamlayan her katılımcıya hatıra tişört, yarış kiti
+                çantası ve çeşitli hediyeler verilir.
+              </p>
             </div>
           </div>
 
@@ -84,7 +87,8 @@ const AwardsPage = () => {
             <div>
               <h3 className="font-bold text-xl mb-2">Genel Klasman Kupaları</h3>
               <p>
-                8K, 15K, 38K, 50K parkurlarında kadın ve erkek ilk 3'e kupa verilir.
+                8K, 15K, 30K, 50K parkurlarında kadın ve erkek ilk 3'e kupa
+                verilir.
               </p>
             </div>
           </div>

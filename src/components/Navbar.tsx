@@ -36,9 +36,9 @@ const Navbar = () => {
     //     isHome ? (scrolled ? "bg-[#fbbf24]" : "bg-transparent") : "bg-[#fbbf24]"
     //   }`}
     // >
-         <header
+    <header
       className={`fixed top-0 left-0 w-full z-50  transition-colors duration-300 ${
-        isHome ? ("bg-transparent") : "bg-[#fbbf24]"
+        isHome ? "bg-transparent" : "bg-[#fbbf24]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -117,12 +117,12 @@ const Navbar = () => {
                 15K Wild Canyon Run
               </Link>
               <Link
-                to="/TrailDetail38K"
+                to="/TrailDetail30K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
-                38K Mountain Legend
+                30K Mountain Legend
               </Link>
-                <Link
+              <Link
                 to="/TrailDetail50K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
@@ -134,12 +134,11 @@ const Navbar = () => {
             Galeri
           </Link>
 
-        <div className="relative group">
-  <Link to="/Results" className="hover:underline">
-    Sonuçlar
-  </Link>
-</div>
-
+          <div className="relative group">
+            <Link to="/Results" className="hover:underline">
+              Sonuçlar
+            </Link>
+          </div>
 
           <Link to="/ContactPage" className="block px-4 py-1 hover:bg-gray-300">
             İletişim
@@ -251,13 +250,13 @@ const Navbar = () => {
                 15K WILD CANYON
               </Link>
               <Link
-                to="/TrailDetail38K"
+                to="/TrailDetail30K"
                 className="block px-4 py-1 hover:bg-gray-300"
                 onClick={() => setMenuOpen(false)}
               >
-                38K MOUNTAIN LEGEND
+                30K MOUNTAIN LEGEND
               </Link>
-                <Link
+              <Link
                 to="/TrailDetail50K"
                 className="block px-4 py-1 hover:bg-gray-300"
                 onClick={() => setMenuOpen(false)}
@@ -270,10 +269,9 @@ const Navbar = () => {
           <a href="https://drive.google.com/drive/folders/1PHkNfhQnJfdKLmNJKf9zh0rsG0AHA5s9">
             Galeri
           </a>
-   <Link to="/Results" onClick={() => setMenuOpen(false)}>
-  Sonuçlar
-</Link>
-
+          <Link to="/Results" onClick={() => setMenuOpen(false)}>
+            Sonuçlar
+          </Link>
 
           <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
             İletişim

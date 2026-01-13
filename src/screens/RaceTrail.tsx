@@ -26,14 +26,14 @@ const RaceTrail = () => {
       />
 
       <TrailCard
-        title="38K MOUNTAIN LEGEND TRAIL"
-        distance="38K"
+        title="30K MOUNTAIN LEGEND TRAIL"
+        distance="30K"
         elevation="1450m+"
         backgroundImg="/bora5.jpg"
         itraImg="/itra2.png"
         utmbImg="/utmb50.png"
         extraImg="/itra.png"
-        detailPath="/TrailDetail38K"
+        detailPath="/TrailDetail30K"
       />
 
       <TrailCard
@@ -41,7 +41,7 @@ const RaceTrail = () => {
         distance="50K"
         elevation="1585m+"
         backgroundImg="/resim5.JPG"
-        itraImg="/itra4.png"
+        itraImg="/itra4_2.png"
         utmbImg="/utmb50.png"
         extraImg="/itra.png"
         detailPath="/TrailDetail50K"
