@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Countdown from "./components/Countdown";
 import RaceTrail from "./screens/RaceTrail";
 import TrailDetail8K from "./screens/TrailDetail8K";
-import TrailDetail17K from "./screens/TrailDetail17K";
 import ContactPage from "./screens/ContactPage";
 import AboutPage from "./screens/AboutPage";
 import Results2024 from "./screens/Results2024";
@@ -20,6 +19,7 @@ import ContactSection from "./screens/ContactSection";
 import Results from "./screens/Results";
 import TrailDetail50K from "./screens/TrailDetail50K";
 import TrailDetail30K from "./screens/TrailDetail30K";
+import TrailDetail15K from "./screens/TrailDetail15K";
 
 const slides = [
   {
@@ -107,12 +107,12 @@ const Home = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/TrailDetail8K" element={<TrailDetail8K />} />
-        <Route path="/TrailDetail17K" element={<TrailDetail17K />} />
+        <Route path="/TrailDetail15K" element={<TrailDetail15K />} />
         <Route path="/TrailDetail30K" element={<TrailDetail30K />} />
         <Route path="/TrailDetail50K" element={<TrailDetail50K />} />
 
@@ -128,7 +128,7 @@ function App() {
         <Route path="/Results" element={<Results />} />
         <Route path="/AccommodationsPage" element={<AccommodationsPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

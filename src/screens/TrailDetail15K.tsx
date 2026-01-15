@@ -1,4 +1,4 @@
-const TrailDetail17K = () => {
+const TrailDetail15K = () => {
   return (
     <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
@@ -8,7 +8,7 @@ const TrailDetail17K = () => {
       <div className="w-full max-w-4xl text-center mb-6">
         <iframe
           src="https://tracedetrail.fr/en/iframe/6867"
-          title="17K Route"
+          title="15K Route"
           width="100%"
           height="600"
           allowFullScreen
@@ -17,21 +17,21 @@ const TrailDetail17K = () => {
       </div>
       <div className="flex justify-between gap-4 mb-4">
         <a
-          href="/files/17K.kml"
+          href="/files/15K.kml"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           KML
         </a>
         <a
-          href="/files/17K.gpx"
+          href="/files/15K.gpx"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
           GPX
         </a>
         <a
-          href="/files/17K.kmz"
+          href="/files/15K.kmz"
           download
           className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
         >
@@ -43,7 +43,7 @@ const TrailDetail17K = () => {
           PARKUR BİLGİSİ
         </h2>
         <p className="mb-4">
-          Yaklaşık uzunluğu 17 km ve 736 m yükseklik kazanımı olan 17K WILD
+          Yaklaşık uzunluğu 15 km ve 736 m yükseklik kazanımı olan 15K WILD
           CANYON RUN parkuru %70 patika, %20 single track ve %10 asfalt yoldan
           oluşmaktadır. Yokuş ve tırmanış dolu patika yolları ve yarış genelinin
           580 metrenin üzerinde geçmesinden dolayı hissedilen zorluk seviyesi
@@ -60,7 +60,7 @@ const TrailDetail17K = () => {
         <p className="mb-4">
           Yarış yaklaşık 800M bir patika yokuşu ile başlar ve barajın serin
           sularına doğru devam eder. Parkurun tamamlanması için yarışmacılara
-          tanınacak olan toplam süre 3,5 saattir. 17K WILD CANYON RUN parkurunda
+          tanınacak olan toplam süre 3,5 saattir. 15K WILD CANYON RUN parkurunda
           2 adet CP noktası bulunmaktadır.Dönüşte aynı cp noktasından
           geçilecektir.Toplamda 3 adet CP noktası bulunmaktadır.
         </p>
@@ -143,7 +143,7 @@ const TrailDetail17K = () => {
           FERAGATNAME
         </h2>
         <p className="mb-4">
-          17K Wild Canyon Run koşusuna kayıt olan katılımcılar, koşu kurallarını
+          15K Wild Canyon Run koşusuna kayıt olan katılımcılar, koşu kurallarını
           ve yapılabilecek değişiklikleri kabul etmiş sayılır. Organizasyon,
           katılımcıların neden olduğu ya da maruz kaldıkları zararlardan sorumlu
           tutulamaz.
@@ -153,4 +153,4 @@ const TrailDetail17K = () => {
   );
 };
 
-export default TrailDetail17K;
+export default TrailDetail15K;

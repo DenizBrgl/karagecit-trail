@@ -16,12 +16,12 @@ const sponsors = [
   },
   {
     name: "Erkan Design",
-    image: "/erkan.jpg",
+    image: "/erkan.png",
     url: "https://www.redbull.com",
   },
   {
-    name: "Midyeci Selman",
-    image: "/midyeci.png",
+    name: "Green River",
+    image: "/greenriver.png",
     url: "https://www.redbull.com",
   },
   {
@@ -39,37 +39,37 @@ const sponsors = [
     image: "/cezy.png",
     url: "https://www.decathlon.com.tr",
   },
-  {
-    name: "Tnc Fitness House",
-    image: "/tnc.jpg",
-    url: "https://www.garmin.com",
-  },
+  // {
+  //   name: "Tnc Fitness House",
+  //   image: "/tnc.jpg",
+  //   url: "https://www.garmin.com",
+  // },
   {
     name: "Türkiye Atletizm Federasyonu",
     image: "/atl.png",
     url: "https://www.macfit.com.tr",
   },
-  {
-    name: "Sarıgül Mühendislik",
-    image: "/image.png",
-    url: "https://www.sarigulmuhendislik.com/",
-  },
-  {
-    name: "Makro Sağlıklı Yaşam Merkezi",
-    image: "/makro.png",
-    url: "https://www.makrosaglik.com/",
-  },
-  {
-    name: "Asf Logistics",
-    image: "/asf.png",
-    url: "https://www.heardline.com/",
-  },
+  // {
+  //   name: "Sarıgül Mühendislik",
+  //   image: "/image.png",
+  //   url: "https://www.sarigulmuhendislik.com/",
+  // },
+  // {
+  //   name: "Makro Sağlıklı Yaşam Merkezi",
+  //   image: "/makro.png",
+  //   url: "https://www.makrosaglik.com/",
+  // },
+  // {
+  //   name: "Asf Logistics",
+  //   image: "/asf.png",
+  //   url: "https://www.heardline.com/",
+  // },
 
-  {
-    name: "Gümsan Global Gümrük Müşavirliği",
-    image: "/gumsan.png",
-    url: "https://www.gumsan.com/",
-  },
+  // {
+  //   name: "Gümsan Global Gümrük Müşavirliği",
+  //   image: "/gumsan.png",
+  //   url: "https://www.gumsan.com/",
+  // },
 ];
 
 const SupportersPage = () => {
@@ -92,9 +92,9 @@ const SupportersPage = () => {
               alt={sponsor.name}
               className="w-32 h-32 object-contain mb-4"
             />
-            <h3 className="text-lg font-semibold text-[#1a237e]">
+            {/* <h3 className="text-lg font-semibold text-[#1a237e]">
               {sponsor.name}
-            </h3>
+            </h3> */}
           </a>
         ))}
       </div>

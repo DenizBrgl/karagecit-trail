@@ -111,7 +111,7 @@ const Navbar = () => {
                 8K Discovery Run
               </Link>
               <Link
-                to="/TrailDetail17K"
+                to="/TrailDetail15K"
                 className="block px-4 py-1 hover:bg-gray-300"
               >
                 15K Wild Canyon Run
@@ -243,7 +243,7 @@ const Navbar = () => {
                 8K DISCOVERY RUN
               </Link>
               <Link
-                to="/TrailDetail17K"
+                to="/TrailDetail15K"
                 className="block px-4 py-1 hover:bg-gray-300"
                 onClick={() => setMenuOpen(false)}
               >
