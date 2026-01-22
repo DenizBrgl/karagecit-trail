@@ -52,7 +52,7 @@ const TrailDetail50K = () => {
         </p>
 
         <p className="mb-4">
-          Yarış 21 Haziran Pazar sabahı saat 06.00’da baraj köprüsünden start
+          Yarış 07 Haziran Pazar sabahı saat 06.00’da baraj köprüsünden start
           alacak ve uzun tırmanışlar ile teknik inişleri içeren bir parkur
           sunacaktır.
         </p>
@@ -113,7 +113,7 @@ const TrailDetail50K = () => {
         </ul>
 
         <p className="mb-4">
-          Ödül töreni 21 Haziran 2026 Pazar günü saat 15.00’te Karageçit
+          Ödül töreni 07 Haziran 2026 Pazar günü saat 15.00’te Karageçit
           festival alanında yapılacaktır.
         </p>
       </div>

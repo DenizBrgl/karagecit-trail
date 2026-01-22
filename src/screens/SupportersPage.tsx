@@ -29,11 +29,11 @@ const sponsors = [
     image: "/Reparo-Yoga.jpg",
     url: "https://www.macfit.com.tr",
   },
-  {
-    name: "Triton Yazılım Teknolojileri San. ve Tic. Ltd Şti",
-    image: "/tr.png",
-    url: "https://www.redbull.com",
-  },
+  // {
+  //   name: "Triton Yazılım Teknolojileri San. ve Tic. Ltd Şti",
+  //   image: "/tr.png",
+  //   url: "https://www.redbull.com",
+  // },
   {
     name: "Cezy Yenilebilir Enerji",
     image: "/cezy.png",

@@ -41,7 +41,7 @@ const RaceTrail = () => {
         distance="50K"
         elevation="1585m+"
         backgroundImg="/resim5.JPG"
-        itraImg="/itra4_2.png"
+        itraImg="/itra2.png"
         utmbImg="/utmb50.png"
         extraImg="/itra.png"
         detailPath="/TrailDetail50K"

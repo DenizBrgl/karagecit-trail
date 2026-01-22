@@ -9,7 +9,7 @@ const ProgramPage = () => {
         {/* 30 Ağustos Cumartesi */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            20 HAZİRAN 2026 CUMARTESİ
+            06 HAZİRAN 2026 CUMARTESİ
           </h2>
 
           <div className="overflow-x-auto">
@@ -48,10 +48,10 @@ const ProgramPage = () => {
           </div>
         </div>
 
-        {/* 21 Haziran Pazar */}
+        {/* 07 Haziran Pazar */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            21 HAZİRAN 2026 PAZAR
+            07 HAZİRAN 2026 PAZAR
           </h2>
 
           <p className="text-center text-md text-gray-700 mb-6 italic">
