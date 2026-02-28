@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 
 type GalleryYearCard = {
   year: number;
-  image: string; // public klasöründen: "/gallery/2024.jpg" gibi
-  to: string; // örn: "/gallery/2024"
+  image: string;
+  to: string;
+  desc: string;
+  isExternal: boolean;
 };
 
 const cards: GalleryYearCard[] = [
@@ -11,59 +13,114 @@ const cards: GalleryYearCard[] = [
     year: 2026,
     image: "bora1.jpg",
     to: "#",
+    desc: "Yakında yüklenecek...",
+    isExternal: false,
   },
   {
     year: 2025,
     image: "bora2.jpg",
     to: "https://drive.google.com/drive/folders/1xKm03qS4rADKACwo5nwiOFOcvZGfTrFU?sort=13&direction=a&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnaY2PlZ1XUbfG8KF5k3xMPsU1El400P_49AqsBTiLfGywc0t-3AlbudbyaU0_aem_RAnYldOoETldG5rRQF0z7A",
+    desc: "Google Drive albümünü görüntüle",
+    isExternal: true,
   },
   {
     year: 2024,
     image: "resim13.jpg",
     to: "https://drive.google.com/drive/u/0/folders/1OrX6cpnh71edkZ54KkIWE339PIBieXAu",
+    desc: "Google Drive albümünü görüntüle",
+    isExternal: true,
   },
 ];
 
 const Gallery = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* üst boşluk: navbar sabit olduğu için */}
-      <div className="pt-28 pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl text-center md:text-5xl font-semibold text-red-600 mb-10">
-            Fotoğraflar
-          </h1>
+    <div className="min-h-screen bg-gray-50 pt-24 pb-20">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {cards.map((c) => (
-              <Link
-                key={c.year}
-                to={c.to}
-                className="group relative overflow-hidden rounded-md shadow-sm"
-              >
+      {/* Hero */}
+      <div className="bg-[#1a237e] py-14 px-4 text-center relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #fbbf24 0, #fbbf24 1px, transparent 0, transparent 50%)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <p className="relative text-[#fbbf24] uppercase tracking-[0.35em] text-sm font-bold mb-2">
+          Karageçit Trail
+        </p>
+        <h1 className="relative text-4xl md:text-5xl font-extrabold text-white">
+          FOTOĞRAFLAR
+        </h1>
+        <div className="relative mt-4 mx-auto w-20 h-1 bg-[#fbbf24] rounded-full" />
+        <p className="relative text-blue-200 text-sm mt-4">
+          Yıla tıklayarak o yıla ait fotoğraf albümüne ulaşabilirsiniz.
+        </p>
+      </div>
+
+      {/* Kartlar */}
+      <div className="max-w-5xl mx-auto px-4 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {cards.map((c) => {
+            const content = (
+              <div className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                 {/* Görsel */}
                 <img
                   src={c.image}
                   alt={`${c.year} Fotoğraflar`}
-                  className="w-full h-[260px] md:h-[300px] object-cover transform transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-64 md:h-72 object-cover transform transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
 
-           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 transition-colors duration-300" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-<div className="absolute inset-0 flex items-center justify-center">
-  <div className="flex items-center gap-3 bg-red-600/90 backdrop-blur text-white font-bold px-8 py-3 rounded-md shadow-lg group-hover:scale-105 transition-transform">
-    <span className="text-2xl tracking-wide">{c.year}</span>
-  </div>
-</div>
+                {/* 2026 — Yakında rozeti */}
+                {c.to === "#" && (
+                  <div className="absolute top-4 right-4 bg-gray-800/80 text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                    Yakında
+                  </div>
+                )}
+
+                {/* Yıl & açıklama */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <p className="text-[#fbbf24] text-xs font-bold uppercase tracking-widest mb-1">
+                        Karageçit Trail
+                      </p>
+                      <h2 className="text-white text-4xl font-extrabold leading-none">
+                        {c.year}
+                      </h2>
+                    </div>
+                    {c.to !== "#" && (
+                      <div className="bg-[#fbbf24] text-[#1a237e] rounded-full w-10 h-10 flex items-center justify-center font-extrabold text-lg shadow-md group-hover:scale-110 transition-transform">
+                        →
+                      </div>
+                    )}
+                  </div>
+                  {c.to !== "#" && (
+                    <p className="text-blue-200 text-xs mt-2">{c.desc}</p>
+                  )}
+                </div>
+              </div>
+            );
+
+            return c.isExternal ? (
+              <a
+                key={c.year}
+                href={c.to}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content}
+              </a>
+            ) : (
+              <Link key={c.year} to={c.to}>
+                {content}
               </Link>
-            ))}
-          </div>
-
-          {/* İstersen altta kısa açıklama */}
-          <p className="mt-12 text-gray-500">
-            Yıla tıklayarak o yıla ait fotoğraf albümüne ulaşabilirsiniz.
-          </p>
+            );
+          })}
         </div>
       </div>
     </div>

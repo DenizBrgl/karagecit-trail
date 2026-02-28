@@ -1,13 +1,13 @@
 const sponsors = [
   {
-    name: "Tarsus  Belediyesi",
+    name: "Tarsus Belediyesi",
     image: "/tarsus.svg",
-    url: "https://www.decathlon.com.tr",
+    url: "https://www.tarsus.bel.tr",
   },
   {
     name: "Heardline",
     image: "/heardline1.png",
-    url: "https://www.heardline.com",
+    url: "#",
   },
   {
     name: "Mersin Üniversitesi",
@@ -17,88 +17,96 @@ const sponsors = [
   {
     name: "Erkan Design",
     image: "/erkan.png",
-    url: "https://www.redbull.com",
+    url: "#",
   },
   {
     name: "Green River",
     image: "/greenriver.png",
-    url: "https://www.redbull.com",
+    url: "#",
   },
   {
     name: "Reparo Yoga",
     image: "/Reparo-Yoga.jpg",
-    url: "https://www.macfit.com.tr",
+    url: "https://reparoyoga.com",
   },
-  // {
-  //   name: "Triton Yazılım Teknolojileri San. ve Tic. Ltd Şti",
-  //   image: "/tr.png",
-  //   url: "https://www.redbull.com",
-  // },
   {
     name: "Cezy Yenilebilir Enerji",
     image: "/cezy.png",
-    url: "https://www.decathlon.com.tr",
+    url: "#",
   },
-  // {
-  //   name: "Tnc Fitness House",
-  //   image: "/tnc.jpg",
-  //   url: "https://www.garmin.com",
-  // },
   {
     name: "Türkiye Atletizm Federasyonu",
     image: "/atl.png",
-    url: "https://www.macfit.com.tr",
+    url: "#",
   },
-  // {
-  //   name: "Sarıgül Mühendislik",
-  //   image: "/image.png",
-  //   url: "https://www.sarigulmuhendislik.com/",
-  // },
-  // {
-  //   name: "Makro Sağlıklı Yaşam Merkezi",
-  //   image: "/makro.png",
-  //   url: "https://www.makrosaglik.com/",
-  // },
-  // {
-  //   name: "Asf Logistics",
-  //   image: "/asf.png",
-  //   url: "https://www.heardline.com/",
-  // },
-
-  // {
-  //   name: "Gümsan Global Gümrük Müşavirliği",
-  //   image: "/gumsan.png",
-  //   url: "https://www.gumsan.com/",
-  // },
 ];
 
 const SupportersPage = () => {
   return (
-    <div className="min-h-screen pt-8 bg-gray-100 px-4 md:px-20 py-12 text-gray-800">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#1a237e]">
-        DESTEKÇİLERİMİZ
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {sponsors.map((sponsor, index) => (
+    <section className="bg-white py-16 px-4">
+      {/* Başlık */}
+      <div className="max-w-5xl mx-auto text-center mb-12">
+        <p className="text-[#fbbf24] uppercase tracking-[0.35em] text-xs font-bold mb-2">
+          Birlikte Daha Güçlüyüz
+        </p>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1a237e]">
+          DESTEKÇİLERİMİZ
+        </h2>
+        <div className="mt-3 mx-auto w-16 h-1 bg-[#fbbf24] rounded-full" />
+      </div>
+
+      {/* Sponsor Grid */}
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {sponsors.map((sponsor, i) => (
           <a
-            key={index}
-            href="#"
+            key={i}
+            href={sponsor.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300"
+            title={sponsor.name}
+            className="group bg-gray-50 border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center hover:border-[#fbbf24] hover:shadow-md hover:bg-white transition-all duration-300"
           >
             <img
               src={sponsor.image}
               alt={sponsor.name}
-              className="w-32 h-32 object-contain mb-4"
+              className="w-24 h-24 object-contain transition-all duration-300"
             />
-            {/* <h3 className="text-lg font-semibold text-[#1a237e]">
+            <p className="mt-3 text-xs font-semibold text-gray-400 group-hover:text-[#1a237e] text-center transition-colors duration-300">
               {sponsor.name}
-            </h3> */}
+            </p>
           </a>
         ))}
       </div>
-    </div>
+
+      {/* Sponsor Ol CTA */}
+      <div className="max-w-5xl mx-auto mt-12 bg-[#1a237e] rounded-2xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #fbbf24 0, #fbbf24 1px, transparent 0, transparent 50%)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <div className="relative text-center md:text-left">
+          <p className="text-[#fbbf24] text-xs font-bold uppercase tracking-widest mb-1">
+            Destekçi Ol
+          </p>
+          <h3 className="text-white text-xl font-extrabold">
+            Siz de aramıza katılın!
+          </h3>
+          <p className="text-blue-200 text-sm mt-1">
+            Karageçit Trail'e sponsor olmak için bizimle iletişime geçin.
+          </p>
+        </div>
+        <a
+          href="mailto:karagecittrail@gmail.com"
+          className="relative bg-[#fbbf24] hover:bg-yellow-400 text-[#1a237e] font-extrabold text-sm px-8 py-3 rounded-full uppercase tracking-widest transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap"
+        >
+          ✉️ İletişime Geç
+        </a>
+      </div>
+    </section>
   );
 };
 

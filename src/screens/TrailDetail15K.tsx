@@ -1,153 +1,212 @@
 const TrailDetail15K = () => {
   return (
-    <div className="pt-24 px-4 mt-10 md:px-20 py-10 text-gray-800 bg-white flex flex-col items-center">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a237e] text-center">
-        15K WILD CANYON RUN
-      </h1>
+    <div className="min-h-screen bg-gray-50 pt-24 pb-20">
 
-      <div className="w-full max-w-4xl text-center mb-6">
-        <iframe
-          src="https://tracedetrail.fr/en/iframe/6867"
-          title="15K Route"
-          width="100%"
-          height="600"
-          allowFullScreen
-          className="border"
-        ></iframe>
+      {/* Hero */}
+      <div className="bg-[#1a237e] py-14 px-4 text-center relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #fbbf24 0, #fbbf24 1px, transparent 0, transparent 50%)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <p className="relative text-[#fbbf24] uppercase tracking-[0.35em] text-sm font-bold mb-2">
+          Karageçit Trail 2026
+        </p>
+        <h1 className="relative text-3xl md:text-5xl font-extrabold text-white">
+          15K WILD CANYON RUN
+        </h1>
+        <div className="relative mt-4 mx-auto w-20 h-1 bg-[#fbbf24] rounded-full" />
       </div>
-      <div className="flex justify-between gap-4 mb-4">
-        <a
-          href="/files/15K.kml"
-          download
-          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
-        >
-          KML
-        </a>
-        <a
-          href="/files/15K.gpx"
-          download
-          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
-        >
-          GPX
-        </a>
-        <a
-          href="/files/15K.kmz"
-          download
-          className="bg-[#fbbf24] px-4 py-2 rounded text-white font-semibold text-center"
-        >
-          KMZ
-        </a>
+
+      {/* Bilgi Kartları */}
+      <div className="max-w-4xl mx-auto px-4 mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { icon: "📏", label: "Mesafe", value: "15 km" },
+          { icon: "⛰️", label: "Yükseklik", value: "736 m" },
+          { icon: "🛤️", label: "Zemin", value: "%70 Patika" },
+          { icon: "⏱️", label: "Süre Limiti", value: "3.5 Saat" },
+        ].map((item, i) => (
+          <div key={i} className="bg-[#fbbf24] rounded-2xl p-4 flex flex-col items-center text-center shadow-md">
+            <span className="text-3xl mb-1">{item.icon}</span>
+            <p className="text-xs uppercase tracking-widest text-[#1a237e]/70 font-semibold">{item.label}</p>
+            <p className="text-xl font-extrabold text-[#1a237e] mt-0.5">{item.value}</p>
+          </div>
+        ))}
       </div>
-      <div className="w-full max-w-4xl text-left">
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          PARKUR BİLGİSİ
-        </h2>
-        <p className="mb-4">
-          Yaklaşık uzunluğu 15 km ve 736 m yükseklik kazanımı olan 15K WILD
-          CANYON RUN parkuru %70 patika, %20 single track ve %10 asfalt yoldan
-          oluşmaktadır. Yokuş ve tırmanış dolu patika yolları ve yarış genelinin
-          580 metrenin üzerinde geçmesinden dolayı hissedilen zorluk seviyesi
-          yüksek olacaktır.
-        </p>
-        <p className="mb-4">
-          07 Haziran Pazar sabahı saat 08.00‘da baraj köprüsünden start alacak,
-          ilk CP noktasından yol ayrımına girecektir.
-        </p>
 
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          PARKUR VE CP NOKTASI
-        </h2>
-        <p className="mb-4">
-          Yarış yaklaşık 800M bir patika yokuşu ile başlar ve barajın serin
-          sularına doğru devam eder. Parkurun tamamlanması için yarışmacılara
-          tanınacak olan toplam süre 3,5 saattir. 15K WILD CANYON RUN parkurunda
-          2 adet CP noktası bulunmaktadır.Dönüşte aynı cp noktasından
-          geçilecektir.Toplamda 3 adet CP noktası bulunmaktadır.
-        </p>
-        <p className="mb-4">
-          Ara noktalarda bulunacak yiyecek ve içecekler sadece katılımcıların
-          kullanımı içindir. Çöpler yine buralarda bulunacak çöp bidonlarına
-          atılmalıdır.
-        </p>
+      <div className="max-w-4xl mx-auto px-4 mt-10 space-y-8">
 
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          GEREKLİ EKİPMANLAR
-        </h2>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            Yarış boyunca görünür şekilde takılı olması gereken göğüs numarası
-          </li>
-          <li>Organizasyon tarafından sağlanacak zamanlama çipi</li>
-          <li>
-            Kayıt sırasında belirtilen bu ekipmanların gösterilmesi zorunludur
-          </li>
-        </ul>
+        {/* Harita */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="bg-[#1a237e] px-5 py-3 flex items-center gap-2">
+            <span className="text-[#fbbf24] text-lg">🗺️</span>
+            <h2 className="text-white font-extrabold text-sm uppercase tracking-widest">Parkur Haritası</h2>
+          </div>
+          <div className="p-4">
+            <iframe
+              src="https://tracedetrail.fr/en/iframe/6867"
+              title="15K Route"
+              width="100%"
+              height="500"
+              allowFullScreen
+              className="rounded-xl w-full"
+            />
+            <div className="flex gap-3 mt-4">
+              {[
+                { label: "KML", href: "/files/15K.kml" },
+                { label: "GPX", href: "/files/15K.gpx" },
+                { label: "KMZ", href: "/files/15K.kmz" },
+              ].map((f) => (
+                  <button
+  onClick={async () => {
+    const res = await fetch(f.href);
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = f.href.split('/').pop() || f.label;
+    a.click();
+    URL.revokeObjectURL(url);
+  }}
+  className="flex-1 text-center bg-[#1a237e] hover:bg-[#0f1757] text-white font-extrabold text-sm py-2.5 rounded-xl transition-colors cursor-pointer"
+>
+  ⬇️ {f.label}
+</button>
+              ))}
+            </div>
+          </div>
+        </div>
 
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          ÖNERİLEN EKİPMANLAR
-        </h2>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            Minimum 500 ml sıvı kapasitesine sahip su şişesi, matara veya su
-            torbası (Pet şişe kabul edilmemektedir)
-          </li>
-          <li>Güneş kremi, güneş gözlüğü</li>
-          <li>Yarışa uygun koşu ayakkabısı</li>
-        </ul>
+        {/* Bölümler */}
+        {[
+          {
+            icon: "🏃",
+            title: "Parkur Bilgisi",
+            content: (
+              <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                <p>Yaklaşık uzunluğu <strong>15 km</strong> ve <strong>736 m yükseklik kazanımı</strong> olan 15K Wild Canyon Run parkuru %70 patika, %20 single track ve %10 asfalt yoldan oluşmaktadır. Yokuş ve tırmanış dolu patika yolları ve yarış genelinin 580 metrenin üzerinde geçmesinden dolayı hissedilen zorluk seviyesi <strong>yüksek</strong> olacaktır.</p>
+                <p>07 Haziran Pazar sabahı saat <strong>08:00</strong>'da baraj köprüsünden start alacak, ilk CP noktasından yol ayrımına girecektir.</p>
+              </div>
+            ),
+          },
+          {
+            icon: "📍",
+            title: "Parkur ve CP Noktası",
+            content: (
+              <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                <p>Yarış yaklaşık <strong>800 m</strong> bir patika yokuşu ile başlar ve barajın serin sularına doğru devam eder. Parkurun tamamlanması için yarışmacılara tanınacak olan toplam süre <strong>3.5 saattir</strong>.</p>
+                <p>15K Wild Canyon Run parkurunda <strong>2 adet CP noktası</strong> bulunmaktadır. Dönüşte aynı CP noktasından geçilecektir — toplamda <strong>3 adet CP</strong> noktası bulunmaktadır.</p>
+                <p>Ara noktalarda bulunacak yiyecek ve içecekler sadece katılımcıların kullanımı içindir. Çöpler yine buralarda bulunacak çöp bidonlarına atılmalıdır.</p>
+              </div>
+            ),
+          },
+          {
+            icon: "🎒",
+            title: "Zorunlu Ekipmanlar",
+            content: (
+              <ul className="space-y-2">
+                {[
+                  "Yarış boyunca görünür şekilde takılı olması gereken göğüs numarası",
+                  "Organizasyon tarafından sağlanacak zamanlama çipi",
+                  "Kayıt sırasında belirtilen ekipmanların gösterilmesi zorunludur",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="text-[#fbbf24] font-extrabold mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ),
+          },
+          {
+            icon: "🌟",
+            title: "Önerilen Ekipmanlar",
+            content: (
+              <ul className="space-y-2">
+                {[
+                  "Minimum 500 ml sıvı kapasitesine sahip su şişesi, matara veya su torbası (Pet şişe kabul edilmemektedir)",
+                  "Güneş kremi, güneş gözlüğü",
+                  "Yarışa uygun koşu ayakkabısı",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="text-blue-400 font-extrabold mt-0.5">→</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ),
+          },
+          {
+            icon: "🏥",
+            title: "Güvenlik ve Sağlık",
+            content: (
+              <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                <p>Organizasyon, olumsuz hava koşulları durumunda katılımcıların güvenliğini riske atmamak adına etkinlikte durdurma, kısaltma veya iptal gibi değişiklikler yapma hakkına sahiptir.</p>
+                <p>Koşu boyunca belirlenen kilit noktalarda sağlık personeli ve/veya ambulans hazır bulunacaktır.</p>
+              </div>
+            ),
+          },
+          {
+            icon: "🏆",
+            title: "Ödüller",
+            content: (
+              <div className="space-y-3 text-sm text-gray-600">
+                <p>Koşuyu başarıyla bitiren katılımcılara <strong>bitirme madalyası</strong> verilecektir. Aşağıdaki kategorilerde plaket ödülleri verilecektir:</p>
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                  {["Erkek Genel Klasman", "Kadın Genel Klasman", "Yaş: -29", "Yaş: 30-39", "Yaş: 40-49", "Yaş: 50-59, 60+"].map((cat, i) => (
+                    <div key={i} className="bg-[#fbbf24]/10 border border-[#fbbf24]/30 rounded-xl px-3 py-2 text-xs font-semibold text-[#1a237e]">
+                      🥇 {cat}
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2">Ödül töreni <strong>07 Haziran 2026 Pazar</strong> saat <strong>13:30</strong>'da Karageçit festival alanında yapılacaktır.</p>
+              </div>
+            ),
+          },
+          {
+            icon: "📸",
+            title: "Görsel Materyallerin Kullanımı",
+            content: (
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Etkinliğe kayıt yaptıran katılımcılar, etkinlik süresince çekilen fotoğraf ve videolarının organizasyon tarafından tanıtım amaçlı kullanılmasına onay vermiş sayılır.
+              </p>
+            ),
+          },
+          {
+            icon: "📝",
+            title: "Feragatname",
+            content: (
+              <p className="text-sm text-gray-600 leading-relaxed">
+                15K Wild Canyon Run koşusuna kayıt olan katılımcılar, koşu kurallarını ve yapılabilecek değişiklikleri kabul etmiş sayılır. Organizasyon, katılımcıların neden olduğu ya da maruz kaldıkları zararlardan sorumlu tutulamaz.
+              </p>
+            ),
+          },
+        ].map((section, i) => (
+          <div key={i} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="flex items-center gap-3 px-5 py-4 border-b border-gray-100">
+              <span className="text-xl">{section.icon}</span>
+              <h2 className="font-extrabold text-[#1a237e] text-base uppercase tracking-wide">
+                {section.title}
+              </h2>
+            </div>
+            <div className="px-5 py-4">{section.content}</div>
+          </div>
+        ))}
 
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          GÜVENLİK VE SAĞLIK
-        </h2>
-        <p className="mb-4">
-          Organizasyon, olumsuz hava koşulları (örneğin şiddetli yağmur, yoğun
-          sis, fırtına, aşırı kar yağışı vb.) durumunda, katılımcıların
-          güvenliğini riske atmamak adına etkinlikte durdurma, kısaltma veya
-          iptal gibi değişiklikler yapma hakkına sahiptir. Bu tür değişiklikler,
-          koşu öncesinde veya etkinlik sırasında uygun noktalarda katılımcılara
-          duyurulacaktır. Katılımcıların, alınan kararlara uygun hareket
-          etmeleri zorunludur.
-        </p>
-        <p className="mb-4">
-          Koşu boyunca, daha önce belirlenen kilit noktalarda ve organizasyonun
-          gerekli gördüğü yerlerde sağlık personeli ve/veya ambulans hazır
-          bulunacaktır. Sağlık ekipleri, gerektiğinde katılımcıları sağlık
-          kontrolünden geçirebilir ve koşunun devamının sağlığı riske atacağı
-          durumlarda katılımcıların yarışa devam etmesini engelleyebilir.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">ÖDÜLLER</h2>
-        <p className="mb-4">
-          Koşuyu başarıyla bitiren katılımcılara bitirme madalyası verilecektir.
-          Plaket ve maddi olmayan ödüller aşağıdaki kategorilere verilecektir:
-        </p>
-        <ul className="list-disc list-inside mb-4">
-          <li>Erkek Genel Klasman</li>
-          <li>Kadın Genel Klasman</li>
-          <li>Yaş Kategorileri: 40-, 40-49, 50+</li>
-        </ul>
-        <p className="mb-4">
-          Ödül töreni 07 Haziran 2026 Pazar günü saat 13.30’da Karageçit
-          festival alanında yapılacaktır.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          GÖRSEL MATERYALLERİN KULLANIMI
-        </h2>
-        <p className="mb-4">
-          Etkinliğe kayıt yaptıran katılımcılar, etkinlik süresince çekilen
-          fotoğraf ve videolarının organizasyon tarafından tanıtım amaçlı
-          kullanılmasına onay vermiş sayılır.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-2 text-[#1a237e]">
-          FERAGATNAME
-        </h2>
-        <p className="mb-4">
-          15K Wild Canyon Run koşusuna kayıt olan katılımcılar, koşu kurallarını
-          ve yapılabilecek değişiklikleri kabul etmiş sayılır. Organizasyon,
-          katılımcıların neden olduğu ya da maruz kaldıkları zararlardan sorumlu
-          tutulamaz.
-        </p>
+        {/* Kayıt Butonu */}
+        <div className="flex justify-center pt-4">
+          <a
+            href="https://apphurra.com/etkinlik/karagecit-trail"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fbbf24] hover:bg-yellow-400 text-[#1a237e] font-extrabold text-sm px-12 py-4 rounded-full uppercase tracking-widest transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            🏃 Hemen Kayıt Ol
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,115 +1,219 @@
 const ProgramPage = () => {
+  const saturday = [
+    {
+      etkinlik: "Kit Dağıtımı Başlangıç",
+      saat: "17:00",
+      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      icon: "🎽",
+    },
+    {
+      etkinlik: "DJ Etkinliği ve Makarna Partisi",
+      saat: "18:00 – 19:30",
+      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      icon: "🎶",
+    },
+    {
+      etkinlik: "Kit Dağıtımı Bitiş",
+      saat: "20:00",
+      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      icon: "✅",
+    },
+  ];
+
+  const sunday = [
+    {
+      etkinlik: "Sayapark / Forum / Eski Devlet Hastanesi — Otobüs Kalkışı (30K & 50K)",
+      saat: "04:00",
+      yer: "Mersin",
+      icon: "🚌",
+      highlight: false,
+    },
+    {
+      etkinlik: "Sayapark / Forum / Eski Devlet Hastanesi — Otobüs Kalkışı (8K & 15K)",
+      saat: "06:00",
+      yer: "Mersin",
+      icon: "🚌",
+      highlight: false,
+    },
+    {
+      etkinlik: "Tarsus Şehir Stadyumu Kalkış",
+      saat: "05:30",
+      yer: "Tarsus",
+      icon: "🚌",
+      highlight: false,
+    },
+    {
+      etkinlik: "Geç Kit Dağıtımı (30K & 50K)",
+      saat: "05:00 – 06:00",
+      yer: "Karageçit",
+      icon: "🎽",
+      highlight: false,
+    },
+    {
+      etkinlik: "Geç Kit Dağıtımı (8K & 15K)",
+      saat: "07:00 – 08:00",
+      yer: "Karageçit",
+      icon: "🎽",
+      highlight: false,
+    },
+    {
+      etkinlik: "30K & 50K Yarış Startı",
+      saat: "06:00",
+      yer: "Başlangıç Noktası",
+      icon: "🏁",
+      highlight: true,
+    },
+    {
+      etkinlik: "Zumba — Isınma & 8K/15K Start Hazırlığı",
+      saat: "08:00 – 08:15",
+      yer: "Yarış Alanı",
+      icon: "💃",
+      highlight: false,
+    },
+    {
+      etkinlik: "8K & 15K Yarış Startı",
+      saat: "08:15",
+      yer: "Başlangıç Noktası",
+      icon: "🏁",
+      highlight: true,
+    },
+    {
+      etkinlik: "Yarış Bitişi",
+      saat: "12:30",
+      yer: "Finish Noktası",
+      icon: "🎯",
+      highlight: false,
+    },
+    {
+      etkinlik: "Paddle Board Keyfi",
+      saat: "13:00",
+      yer: "Kadıncık Barajı",
+      icon: "🏄",
+      highlight: false,
+    },
+    {
+      etkinlik: "Ödül Töreni",
+      saat: "14:00",
+      yer: "Sahne Alanı",
+      icon: "🏆",
+      highlight: true,
+    },
+    {
+      etkinlik: "Servislerin Ayrılışı (30K & 50K)",
+      saat: "15:30",
+      yer: "Karageçit",
+      icon: "🚌",
+      highlight: false,
+    },
+    {
+      etkinlik: "Servislerin Ayrılışı (8K & 15K)",
+      saat: "15:30",
+      yer: "Karageçit",
+      icon: "🚌",
+      highlight: false,
+    },
+  ];
+
   return (
-    <div className="min-h-screen pt-24 bg-gray-100 px-4 md:px-20 py-12 text-gray-800 flex justify-center">
-      <div className="w-full max-w-5xl">
-        <h1 className="text-3xl mt-10 md:text-4xl font-bold text-center text-[#1a237e] mb-12">
+    <div className="min-h-screen bg-gray-50 pt-24 pb-20">
+      {/* Hero Başlık */}
+      <div className="bg-[#1a237e] py-14 px-4 text-center relative overflow-hidden">
+        {/* arka plan desen */}
+        <div className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "repeating-linear-gradient(45deg, #fbbf24 0, #fbbf24 1px, transparent 0, transparent 50%)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <p className="relative text-[#fbbf24] uppercase tracking-[0.35em] text-sm font-bold mb-2">
+          Karageçit Trail 2026
+        </p>
+        <h1 className="relative text-4xl md:text-5xl font-extrabold text-white">
           ETKİNLİK PROGRAMI
         </h1>
+        <div className="relative mt-4 mx-auto w-20 h-1 bg-[#fbbf24] rounded-full" />
+      </div>
 
-        {/* 30 Ağustos Cumartesi */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            06 HAZİRAN 2026 CUMARTESİ
-          </h2>
+      <div className="max-w-4xl mx-auto px-4 mt-14 space-y-14">
 
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto border border-gray-300 text-left bg-white">
-              <thead className="bg-[#fbbf24] text-white">
-                <tr>
-                  <th className="px-4 py-2">Etkinlik</th>
-                  <th className="px-4 py-2">Saat</th>
-                  <th className="px-4 py-2">Yer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="px-4 py-2">Kit Dağıtımı Başlangıç</td>
-                  <td className="px-4 py-2">17:00</td>
-                  <td className="px-4 py-2">
-                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
-                  </td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-4 py-2">Dj Etkinliği Ve Makarna Partisi</td>
-                  <td className="px-4 py-2">18.00-19.30</td>
-                  <td className="px-4 py-2">
-                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
-                  </td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-4 py-2">Kit Dağıtımı Bitiş</td>
-                  <td className="px-4 py-2">20:00</td>
-                  <td className="px-4 py-2">
-                    Draft Mersin Pub(Sahilde Gs Meydanı Karşısı)
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        {/* CUMARTESİ */}
+        <div>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="bg-[#fbbf24] text-[#1a237e] font-extrabold text-lg px-5 py-2 rounded-full shadow">
+              06 Haziran 2026
+            </div>
+            <span className="text-[#1a237e] font-bold text-lg uppercase tracking-widest">
+              Cumartesi
+            </span>
+          </div>
+
+          <div className="space-y-3">
+            {saturday.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-4 bg-white rounded-2xl px-5 py-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              >
+                <span className="text-2xl mt-0.5">{item.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-gray-800">{item.etkinlik}</p>
+                  <p className="text-sm text-gray-500 mt-0.5">📍 {item.yer}</p>
+                </div>
+                <div className="bg-[#fbbf24] text-[#1a237e] font-extrabold text-sm px-3 py-1.5 rounded-xl whitespace-nowrap">
+                  {item.saat}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* 07 Haziran Pazar */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-[#1a237e] mb-4 text-center">
-            07 HAZİRAN 2026 PAZAR
-          </h2>
+        {/* PAZAR */}
+        <div>
+          <div className="flex items-center gap-4 mb-3">
+            <div className="bg-[#1a237e] text-white font-extrabold text-lg px-5 py-2 rounded-full shadow">
+              07 Haziran 2026
+            </div>
+            <span className="text-[#1a237e] font-bold text-lg uppercase tracking-widest">
+              Pazar
+            </span>
+          </div>
 
-          <p className="text-center text-md text-gray-700 mb-6 italic">
-            Yarış alanında Karageçit Camping alanı bulunmaktadır.
+          <p className="text-gray-500 italic text-sm mb-6 pl-1">
+            🏕️ Yarış alanında Karageçit Camping alanı bulunmaktadır.
           </p>
 
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto border border-gray-300 text-left bg-white">
-              <thead className="bg-[#1a237e] text-white">
-                <tr>
-                  <th className="px-4 py-2">Etkinlik</th>
-                  <th className="px-4 py-2">Saat</th>
-                  <th className="px-4 py-2">Yer</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  [
-                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (30K ve 50K için Otobüs Kalkışı)",
-                    "04:00",
-                    "Mersin",
-                  ],
-                  [
-                    "Sayapark Aşağısı Vipol Karşısı - Forum Durağı Karşısı - Eski Devlet Hastanesi (8K & 15K için Otobüs Kalkışı)",
-                    "06:00",
-                    "Mersin",
-                  ],
-                  ["Tarsus Şehir Stadyumu", "05.30", "Tarsus"],
-                  [
-                    "30K ve 50K Geç Kit Dağıtımı ",
-                    "05:00 – 06:00",
-                    "Karageçit",
-                  ],
-                  ["8K & 15K Geç Kit Dağıtımı", "07:00 – 08:00", "Karageçit"],
-
-                  ["🏁 30K ve 50K Yarış Startı", "06:00", "Başlangıç Noktası"],
-                  [
-                    "Zumba – Isınma & 8K-15K Start Hazırlığı",
-                    "08:00 – 08:15",
-                    "Yarış Alanı",
-                  ],
-                  ["🏁 8K & 17K Yarış Startı", "08:15", "Başlangıç Noktası"],
-                  ["Yarış Bitişi", "12:30", "Finish Noktası"],
-                  ["Paddle Board Keyfi", "13:00", "Kadıncık Barajı"],
-                  ["Ödül Töreni", "14:00", "Sahne Alanı"],
-                  ["Servislerin Ayrılışı (33K)", "15:30", "Karageçit"],
-                  ["Servislerin Ayrılışı (8K & 17K)", "15:30", "Karageçit"],
-                ].map(([etkinlik, saat, yer], i) => (
-                  <tr key={i} className="border-t">
-                    <td className="px-4 py-2">{etkinlik}</td>
-                    <td className="px-4 py-2">{saat}</td>
-                    <td className="px-4 py-2">{yer}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="space-y-3">
+            {sunday.map((item, i) => (
+              <div
+                key={i}
+                className={`flex items-start gap-4 rounded-2xl px-5 py-4 shadow-sm border transition-shadow hover:shadow-md ${
+                  item.highlight
+                    ? "bg-[#1a237e] border-[#1a237e] text-white"
+                    : "bg-white border-gray-100 text-gray-800"
+                }`}
+              >
+                <span className="text-2xl mt-0.5">{item.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <p className={`font-semibold ${item.highlight ? "text-white" : "text-gray-800"}`}>
+                    {item.etkinlik}
+                  </p>
+                  <p className={`text-sm mt-0.5 ${item.highlight ? "text-blue-200" : "text-gray-500"}`}>
+                    📍 {item.yer}
+                  </p>
+                </div>
+                <div
+                  className={`font-extrabold text-sm px-3 py-1.5 rounded-xl whitespace-nowrap ${
+                    item.highlight
+                      ? "bg-[#fbbf24] text-[#1a237e]"
+                      : "bg-[#fbbf24] text-[#1a237e]"
+                  }`}
+                >
+                  {item.saat}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </div>
   );

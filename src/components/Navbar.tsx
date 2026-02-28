@@ -4,288 +4,244 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleSubmenu = (key: string) => {
     setOpenSubmenu(openSubmenu === key ? null : key);
   };
-  const [, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    handleScroll(); // ilk render'da da hesaplasın
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const location = useLocation();
   const isHome = location.pathname === "/";
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [location.pathname]);
-  const [forceYellow, setForceYellow] = useState(false);
-  useEffect(() => {
-    if (location.pathname !== "/") {
-      setForceYellow(true);
-    }
+    setMenuOpen(false);
   }, [location.pathname]);
 
+  const isTransparent = isHome && !scrolled;
+
   return (
-    // <header
-    //   className={`fixed top-0 left-0 w-full z-50 shadow-md transition-colors duration-300 ${
-    //     isHome ? (scrolled ? "bg-[#fbbf24]" : "bg-transparent") : "bg-[#fbbf24]"
-    //   }`}
-    // >
     <header
-      className={`fixed top-0 left-0 w-full z-50  transition-colors duration-300 ${
-        isHome ? "bg-transparent" : "bg-[#fbbf24]"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isTransparent ? "bg-transparent shadow-none" : "bg-[#fbbf24] shadow-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link to="/">
-            <img
-              src="/logo_bg.png"
-              alt="Karageçit Trail Logo"
-              className={`w-auto cursor-pointer transition-all duration-300 ${
-                forceYellow ? "h-20" : "h-24"
-              }`}
-            />
-          </Link>
-        </div>
+        <Link to="/" className="flex-shrink-0">
+          <img
+            src="/logo_bg.png"
+            alt="Karageçit Trail Logo"
+            className={`w-auto cursor-pointer transition-all duration-300 ${
+              isTransparent ? "h-24" : "h-16"
+            }`}
+          />
+        </Link>
 
         {/* Masaüstü Menü */}
-        <div className="hidden md:flex items-center rounded-full bg-[#fbbf24] px-6 py-2 font-semibold text-white text-sm md:text-base space-x-5 ml-4 shadow-md">
-          <Link
-            to="/"
-            className="bg-gray-600 text-white px-4 py-1 rounded-md font-bold"
-          >
-            Anasayfa
-          </Link>
+        <nav className="hidden md:flex items-center gap-1 text-sm font-semibold">
+          <NavLink to="/" label="Anasayfa" isTransparent={isTransparent} isActive={location.pathname === "/"} />
+          <NavLink to="/AboutPage" label="Hakkımızda" isTransparent={isTransparent} isActive={location.pathname === "/AboutPage"} />
 
-          <Link to="/AboutPage" className="block px-4 py-1 hover:bg-gray-100">
-            Hakkımızda
-          </Link>
+          <DropdownMenu label="Bilgi Noktası" isTransparent={isTransparent}>
+            <DropItem to="/RulesPage" label="📋 Genel Kurallar" />
+            <DropItem to="/ProgramPage" label="🗓️ Program" />
+            <DropItem to="/AwardsPage" label="🏆 Ödüller" />
+            <DropItem to="/AccommodationsPage" label="🏨 Konaklama" />
+            <DropItem to="/RunList" label="👥 Katılımcı Listesi" />
+          </DropdownMenu>
 
-          <div className="relative group">
-            <button className="hover:underline">Bilgi Noktası ▾</button>
-            <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow rounded z-50 min-w-[10rem] mt-0 top-full">
-              <Link
-                to="/RulesPage"
-                className="block px-4 py-1 hover:bg-gray-100"
-              >
-                Genel Kurallar
-              </Link>
-              <Link
-                to="/ProgramPage"
-                className="block px-4 py-1 hover:bg-gray-100"
-              >
-                Program
-              </Link>
-              <Link
-                to="/AwardsPage"
-                className="block px-4 py-1 hover:bg-gray-100"
-              >
-                Ödüller
-              </Link>
-              <Link
-                to="/AccommodationsPage"
-                className="block px-4 py-1 hover:bg-gray-100"
-              >
-                Konaklama
-              </Link>
-              <Link to="/RunList" className="block px-4 py-1 hover:bg-gray-100">
-                Katılımcı Listesi
-              </Link>
-            </div>
-          </div>
+          <DropdownMenu label="Parkurlar" isTransparent={isTransparent}>
+            <DropItem to="/TrailDetailKidsRun" label="🧒 Çocuk Koşusu" highlight />
+            <DropItem to="/TrailDetail8K" label="🟡 8K Discovery Run" />
+            <DropItem to="/TrailDetail15K" label="🟠 15K Wild Canyon Run" />
+            <DropItem to="/TrailDetail30K" label="🔵 30K Mountain Legend" />
+            <DropItem to="/TrailDetail50K" label="🔴 50K Ultra Challenge" />
+          </DropdownMenu>
 
-          <div className="relative group">
-            <button className="hover:underline">Parkurlar ▾</button>
-            <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow rounded z-50 min-w-[10rem] mt-0 top-full">
-              <Link
-                to="/TrailDetail8K"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                8K Discovery Run
-              </Link>
-              <Link
-                to="/TrailDetail15K"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                15K Wild Canyon Run
-              </Link>
-              <Link
-                to="/TrailDetail30K"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                30K Mountain Legend
-              </Link>
-              <Link
-                to="/TrailDetail50K"
-                className="block px-4 py-1 hover:bg-gray-300"
-              >
-                50K Ultra Challenge
-              </Link>
-            </div>
-          </div>
-          <Link to="/Gallery" className="block px-4 py-1 hover:bg-gray-300">
-            Galeri
-          </Link>
-
-          <div className="relative group">
-            <Link to="/Results" className="hover:underline">
-              Sonuçlar
-            </Link>
-          </div>
-
-          <Link to="/ContactPage" className="block px-4 py-1 hover:bg-gray-300">
-            İletişim
-          </Link>
+          <NavLink to="/Gallery" label="Galeri" isTransparent={isTransparent} isActive={location.pathname === "/Gallery"} />
+          <NavLink to="/Results" label="Sonuçlar" isTransparent={isTransparent} isActive={location.pathname === "/Results"} />
+          <NavLink to="/ContactPage" label="İletişim" isTransparent={isTransparent} isActive={location.pathname === "/ContactPage"} />
 
           <a
             href="https://apphurra.com/etkinlik/karagecit-trail"
-            className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-800"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 bg-[#1a237e] hover:bg-[#0f1757] text-white font-extrabold px-4 py-2 rounded-full text-xs uppercase tracking-widest transition-all duration-200 hover:scale-105 shadow"
           >
-            Kayıt Ol
+            🏃 Kayıt Ol
           </a>
-        </div>
+        </nav>
 
-        {/* Hamburger Butonu (mobil) */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="bg-[#fbbf24] text-black text-2xl rounded-md px-3 py-1 shadow-md focus:outline-none"
-          >
-            {menuOpen ? "✕" : "☰"}
-          </button>
-        </div>
+        {/* Hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={`md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg transition-colors ${
+            isTransparent ? "bg-white/20 hover:bg-white/30" : "bg-[#1a237e]/20 hover:bg-[#1a237e]/30"
+          }`}
+        >
+          <span className={`block w-5 h-0.5 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""} ${isTransparent ? "bg-white" : "bg-[#1a237e]"}`} />
+          <span className={`block w-5 h-0.5 transition-all duration-300 ${menuOpen ? "opacity-0" : ""} ${isTransparent ? "bg-white" : "bg-[#1a237e]"}`} />
+          <span className={`block w-5 h-0.5 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""} ${isTransparent ? "bg-white" : "bg-[#1a237e]"}`} />
+        </button>
       </div>
 
       {/* Mobil Menü */}
-      {menuOpen && (
-        <div className="bg-[#fbbf24] w-full flex flex-col items-start px-6 py-4 space-y-3 text-white font-semibold text-base md:hidden">
-          <Link
-            to="/"
-            className="bg-gray-500 text-white px-4 py-1 rounded-md font-bold w-full text-center"
-            onClick={() => setMenuOpen(false)}
-          >
-            Anasayfa
-          </Link>
-          <Link to="/AboutPage" onClick={() => setMenuOpen(false)}>
-            Hakkımızda
-          </Link>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-[#1a237e] px-4 py-5 space-y-1">
+          <MobileLink to="/" label="🏠 Anasayfa" onClick={() => setMenuOpen(false)} />
+          <MobileLink to="/AboutPage" label="👋 Hakkımızda" onClick={() => setMenuOpen(false)} />
+          <MobileLink to="/ContactPage" label="📞 İletişim" onClick={() => setMenuOpen(false)} />
 
-          <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
-            İletişim
-          </Link>
+          {/* Bilgi Noktası */}
+          <div>
+            <button
+              onClick={() => toggleSubmenu("info")}
+              className="w-full flex items-center justify-between text-white font-semibold text-sm px-3 py-2.5 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              <span>📌 Bilgi Noktası</span>
+              <span className={`transition-transform duration-200 ${openSubmenu === "info" ? "rotate-180" : ""}`}>▾</span>
+            </button>
+            {openSubmenu === "info" && (
+              <div className="mt-1 ml-3 space-y-1 border-l-2 border-[#fbbf24]/40 pl-3">
+                <MobileLink to="/RulesPage" label="📋 Genel Kurallar" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/AwardsPage" label="🏆 Ödüller" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/ProgramPage" label="🗓️ Program" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/AccommodationsPage" label="🏨 Konaklama" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/RunList" label="👥 Katılımcı Listesi" onClick={() => setMenuOpen(false)} sub />
+              </div>
+            )}
+          </div>
 
-          <button
-            onClick={() => toggleSubmenu("info")}
-            className="w-full text-left"
-          >
-            Bilgi Noktası ▾
-          </button>
-          {openSubmenu === "info" && (
-            <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link
-                to="/RulesPage"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Genel Kurallar
-              </Link>
-              <Link
-                to="/AwardsPage"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Ödüller
-              </Link>
-              <Link
-                to="/ProgramPage"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Program
-              </Link>
-              <Link
-                to="/AccommodationsPage"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Konaklama
-              </Link>
-              <Link
-                to="/RunList"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Katılımcı Listesi
-              </Link>
-            </div>
-          )}
+          {/* Parkurlar */}
+          <div>
+            <button
+              onClick={() => toggleSubmenu("tracks")}
+              className="w-full flex items-center justify-between text-white font-semibold text-sm px-3 py-2.5 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              <span>🗺️ Parkurlar</span>
+              <span className={`transition-transform duration-200 ${openSubmenu === "tracks" ? "rotate-180" : ""}`}>▾</span>
+            </button>
+            {openSubmenu === "tracks" && (
+              <div className="mt-1 ml-3 space-y-1 border-l-2 border-[#fbbf24]/40 pl-3">
+                <MobileLink to="/TrailDetailKidsRun" label="🧒 Çocuk Koşusu" onClick={() => setMenuOpen(false)} sub highlight />
+                <MobileLink to="/TrailDetail8K" label="🟡 8K Discovery Run" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/TrailDetail15K" label="🟠 15K Wild Canyon" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/TrailDetail30K" label="🔵 30K Mountain Legend" onClick={() => setMenuOpen(false)} sub />
+                <MobileLink to="/TrailDetail50K" label="🔴 50K Ultra Challenge" onClick={() => setMenuOpen(false)} sub />
+              </div>
+            )}
+          </div>
 
-          <button
-            onClick={() => toggleSubmenu("tracks")}
-            className="w-full text-left"
-          >
-            Parkurlar ▾
-          </button>
-          {openSubmenu === "tracks" && (
-            <div className="pl-4 flex flex-col text-sm text-white space-y-1 w-full">
-              <Link
-                to="/TrailDetail8K"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                8K DISCOVERY RUN
-              </Link>
-              <Link
-                to="/TrailDetail15K"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                15K WILD CANYON
-              </Link>
-              <Link
-                to="/TrailDetail30K"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                30K MOUNTAIN LEGEND
-              </Link>
-              <Link
-                to="/TrailDetail50K"
-                className="block px-4 py-1 hover:bg-gray-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                50K ULTRA CHALLENGE
-              </Link>
-            </div>
-          )}
+          <MobileLink to="/Gallery" label="📸 Galeri" onClick={() => setMenuOpen(false)} />
+          <MobileLink to="/Results" label="🏅 Sonuçlar" onClick={() => setMenuOpen(false)} />
 
-          <a href="https://drive.google.com/drive/folders/1PHkNfhQnJfdKLmNJKf9zh0rsG0AHA5s9">
-            Galeri
-          </a>
-          <Link to="/Results" onClick={() => setMenuOpen(false)}>
-            Sonuçlar
-          </Link>
-
-          <Link to="/ContactPage" onClick={() => setMenuOpen(false)}>
-            İletişim
-          </Link>
-          <a
-            href="https://apphurra.com/etkinlik/karagecit-trail"
-            className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-800 w-full text-center"
-          >
-            Kayıt Ol
-          </a>
+          <div className="pt-2">
+            <a
+              href="https://apphurra.com/etkinlik/karagecit-trail"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center bg-[#fbbf24] text-[#1a237e] font-extrabold text-sm px-4 py-3 rounded-xl uppercase tracking-widest hover:bg-yellow-400 transition-colors"
+            >
+              🏃 Hemen Kayıt Ol
+            </a>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };
+
+/* ── Yardımcı Bileşenler ── */
+
+const NavLink = ({
+  to, label, isTransparent, isActive,
+}: {
+  to: string; label: string; isTransparent: boolean; isActive: boolean;
+}) => (
+  <Link
+    to={to}
+    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+      isActive
+        ? "bg-[#1a237e] text-white"
+        : isTransparent
+        ? "text-white hover:bg-white/20"
+        : "text-[#1a237e] hover:bg-[#1a237e]/10"
+    }`}
+  >
+    {label}
+  </Link>
+);
+
+const DropdownMenu = ({
+  label, children, isTransparent,
+}: {
+  label: string; children: React.ReactNode; isTransparent: boolean;
+}) => (
+  <div className="relative group">
+    <button
+      className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+        isTransparent
+          ? "text-white hover:bg-white/20"
+          : "text-[#1a237e] hover:bg-[#1a237e]/10"
+      }`}
+    >
+      {label}
+      <span className="text-xs transition-transform duration-200 group-hover:rotate-180">▾</span>
+    </button>
+    <div className="absolute hidden group-hover:block top-full left-0 mt-1 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 min-w-[13rem] z-50">
+      {children}
+    </div>
+  </div>
+);
+
+const DropItem = ({
+  to, label, highlight,
+}: {
+  to: string; label: string; highlight?: boolean;
+}) => (
+  <Link
+    to={to}
+    className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${
+      highlight
+        ? "text-yellow-600 font-bold hover:bg-yellow-50"
+        : "text-gray-700 hover:bg-gray-50 hover:text-[#1a237e]"
+    }`}
+  >
+    {label}
+  </Link>
+);
+
+const MobileLink = ({
+  to, label, onClick, sub, highlight,
+}: {
+  to: string; label: string; onClick: () => void; sub?: boolean; highlight?: boolean;
+}) => (
+  <Link
+    to={to}
+    onClick={onClick}
+    className={`block px-3 py-2 rounded-xl text-sm font-semibold transition-colors ${
+      highlight
+        ? "bg-[#fbbf24]/20 text-[#fbbf24] hover:bg-[#fbbf24]/30"
+        : sub
+        ? "text-white/80 hover:bg-white/10 hover:text-white"
+        : "text-white hover:bg-white/10"
+    }`}
+  >
+    {label}
+  </Link>
+);
 
 export default Navbar;
