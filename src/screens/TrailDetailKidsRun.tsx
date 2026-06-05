@@ -79,6 +79,7 @@ const TrailDetailKidsRun = () => {
             "Kayıt işlemi ebeveyn tarafından yapılmalıdır.",
             "Tüm katılımcılara finişte madalya verilecektir.",
             "Ebeveynler parkur boyunca eşlik edebilir.",
+            "Parkur 400 metre uzunluğunda olup düz ve hafif eğimli zeminlerden oluşur.",
           ].map((rule, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="text-yellow-500 font-bold text-lg mt-0.5">✓</span>
@@ -112,7 +113,7 @@ const TrailDetailKidsRun = () => {
             </div>
           </div>
           <p className="text-gray-600 text-sm">
-            Rota düz zemin üzerinde, etkinlik alanı çevresinde tasarlanmıştır.
+            Rota 400 metre olacak olup düz zemin üzerinde, etkinlik alanı çevresinde tasarlanmıştır.
             Tüm güzergah boyunca görevliler ve yönlendirme levhaları bulunacaktır.
           </p>
         </div>

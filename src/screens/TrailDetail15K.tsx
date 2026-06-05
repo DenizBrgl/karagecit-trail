@@ -88,7 +88,7 @@ const TrailDetail15K = () => {
             content: (
               <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
                 <p>Yaklaşık uzunluğu <strong>15 km</strong> ve <strong>736 m yükseklik kazanımı</strong> olan 15K Wild Canyon Run parkuru %70 patika, %20 single track ve %10 asfalt yoldan oluşmaktadır. Yokuş ve tırmanış dolu patika yolları ve yarış genelinin 580 metrenin üzerinde geçmesinden dolayı hissedilen zorluk seviyesi <strong>yüksek</strong> olacaktır.</p>
-                <p>07 Haziran Pazar sabahı saat <strong>08:00</strong>'da baraj köprüsünden start alacak, ilk CP noktasından yol ayrımına girecektir.</p>
+                <p>07 Haziran Pazar sabahı saat <strong>09:00</strong>'da baraj köprüsünden start alacak, ilk CP noktasından yol ayrımına girecektir.</p>
               </div>
             ),
           },
@@ -162,7 +162,7 @@ const TrailDetail15K = () => {
                     </div>
                   ))}
                 </div>
-                <p className="mt-2">Ödül töreni <strong>07 Haziran 2026 Pazar</strong> saat <strong>13:30</strong>'da Karageçit festival alanında yapılacaktır.</p>
+                <p className="mt-2">Ödül töreni <strong>07 Haziran 2026 Pazar</strong> saat <strong>14:30</strong>'da Karageçit festival alanında yapılacaktır.</p>
               </div>
             ),
           },

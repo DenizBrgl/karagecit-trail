@@ -155,7 +155,7 @@ const TrailDetail30K = () => {
                     </div>
                   ))}
                 </div>
-                <p className="mt-2">Ödül töreni <strong>07 Haziran 2026 Pazar</strong> saat <strong>13:30</strong>'da Karageçit festival alanında yapılacaktır.</p>
+                <p className="mt-2">Ödül töreni <strong>07 Haziran 2026 Pazar</strong> saat <strong>14:30</strong>'da Karageçit festival alanında yapılacaktır.</p>
               </div>
             ),
           },

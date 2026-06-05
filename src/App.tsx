@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Countdown from "./components/Countdown";
 import RaceTrail from "./screens/RaceTrail";
@@ -23,7 +23,6 @@ import TrailDetail15K from "./screens/TrailDetail15K";
 import GallerySection from "./screens/GallerySection";
 import TrailDetailKidsRun from "./screens/TrailDetailKidsRun";
 import TrailsPage from "./screens/TrailsPage";
-import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -79,10 +78,8 @@ const Home = () => {
   return (
     <>
       <main className="bg-white text-gray-900">
-
         {/* Hero Slider */}
         <div className="relative h-screen overflow-hidden">
-          {/* Görseller */}
           {slides.map((slide, index) => (
             <img
               key={index}
@@ -94,17 +91,14 @@ const Home = () => {
             />
           ))}
 
-          {/* Koyu gradient overlay */}
           <div className="absolute inset-0 z-20 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
 
-          {/* Üst şerit — etkinlik bilgisi */}
           <div className="absolute top-0 left-0 right-0 z-30 flex justify-center pt-32 pointer-events-none">
             <span className="bg-[#fbbf24]/90 text-[#1a237e] text-xs font-extrabold px-5 py-1.5 rounded-full uppercase tracking-widest shadow">
               07 Haziran 2026 · Karageçit Trail
             </span>
           </div>
 
-          {/* Yazı Katmanı */}
           <div
             className={`absolute inset-0 z-30 flex flex-col items-center justify-center text-white text-center px-4 transition-opacity duration-500 ${
               animating ? "opacity-0" : "opacity-100"
@@ -120,7 +114,6 @@ const Home = () => {
               {slides[current].subtitle}
             </p>
 
-            {/* Butonlar */}
             <div className="flex flex-wrap gap-4 mt-8 justify-center">
               <a
                 href="https://apphurra.com/etkinlik/karagecit-trail"
@@ -130,13 +123,15 @@ const Home = () => {
               >
                 🏃 Hemen Kayıt Ol
               </a>
-            <Link to="/TrailsPage" className="bg-white/15 hover:bg-white/25 backdrop-blur text-white font-bold text-sm px-8 py-3 rounded-full uppercase tracking-widest transition-all duration-300 border border-white/30">
-  Parkurları Keşfet →
-</Link>
+              <Link
+                to="/TrailsPage"
+                className="bg-white/15 hover:bg-white/25 backdrop-blur text-white font-bold text-sm px-8 py-3 rounded-full uppercase tracking-widest transition-all duration-300 border border-white/30"
+              >
+                Parkurları Keşfet →
+              </Link>
             </div>
           </div>
 
-          {/* Slide göstergesi — sağ kenar dikey */}
           <div className="absolute right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2">
             {slides.map((_, index) => (
               <button
@@ -151,7 +146,6 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Alt bilgi şeridi */}
           <div className="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/80 to-transparent py-6 px-6">
             <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
               <div className="flex gap-6">
@@ -168,10 +162,53 @@ const Home = () => {
             </div>
           </div>
         </div>
-
       </main>
 
       <Countdown />
+
+      {/* Yarış Alanı Kartı */}
+      <div className="bg-white px-4 pb-10">
+        <a
+          href="https://share.google/lVTWmBS4dHhxmaxqY"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-5 bg-[#1a237e] rounded-2xl px-6 py-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.01] relative overflow-hidden"
+        >
+          {/* Diagonal desen */}
+          <div
+            className="absolute inset-0 opacity-10 pointer-events-none"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, #fbbf24 0, #fbbf24 1px, transparent 0, transparent 50%)",
+              backgroundSize: "20px 20px",
+            }}
+          />
+
+          {/* İkon */}
+          <div className="relative bg-[#fbbf24] rounded-xl w-14 h-14 flex items-center justify-center flex-shrink-0 shadow-md">
+            <span className="text-3xl">📍</span>
+          </div>
+
+          {/* Bilgi */}
+          <div className="relative flex-1 text-center sm:text-left">
+            <p className="text-[#fbbf24] text-xs font-bold uppercase tracking-widest mb-0.5">
+              Yarış Alanı
+            </p>
+            <h3 className="text-white font-extrabold text-lg leading-tight">
+              Karageçit Camping
+            </h3>
+            <p className="text-blue-200 text-sm mt-0.5">
+              Karageçit / Tarsus, Mersin — 07 Haziran 2026
+            </p>
+          </div>
+
+          {/* Haritaya git butonu */}
+          <div className="relative bg-white/10 group-hover:bg-[#fbbf24] text-white group-hover:text-[#1a237e] font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-widest transition-all duration-300 flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+            🗺️ Haritada Gör
+          </div>
+        </a>
+      </div>
+
       <RaceTrail />
       <GallerySection />
       <SupportersPage />
@@ -186,6 +223,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/TrailsPage" element={<TrailsPage />} />
+        <Route path="/TrailDetailKidsRun" element={<TrailDetailKidsRun />} />
         <Route path="/TrailDetail8K" element={<TrailDetail8K />} />
         <Route path="/TrailDetail15K" element={<TrailDetail15K />} />
         <Route path="/TrailDetail30K" element={<TrailDetail30K />} />
@@ -200,8 +239,6 @@ function App() {
         <Route path="/AwardsPage" element={<AwardsPage />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Results" element={<Results />} />
-        <Route path="/TrailDetailKidsRun" element={<TrailDetailKidsRun />} />
-        <Route path="/TrailsPage" element={<TrailsPage />} />
         <Route path="/AccommodationsPage" element={<AccommodationsPage />} />
       </Routes>
     </HashRouter>

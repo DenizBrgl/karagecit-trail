@@ -1,44 +1,18 @@
 const sponsors = [
-  {
-    name: "Tarsus Belediyesi",
-    image: "/tarsus.svg",
-    url: "https://www.tarsus.bel.tr",
-  },
-  {
-    name: "Heardline",
-    image: "/heardline1.png",
-    url: "#",
-  },
-  {
-    name: "Mersin Üniversitesi",
-    image: "/meu.png",
-    url: "https://www.mersin.edu.tr/",
-  },
-  {
-    name: "Erkan Design",
-    image: "/erkan.png",
-    url: "#",
-  },
-  {
-    name: "Green River",
-    image: "/greenriver.png",
-    url: "#",
-  },
-  {
-    name: "Reparo Yoga",
-    image: "/Reparo-Yoga.jpg",
-    url: "https://reparoyoga.com",
-  },
-  {
-    name: "Cezy Yenilebilir Enerji",
-    image: "/cezy.png",
-    url: "#",
-  },
-  {
-    name: "Türkiye Atletizm Federasyonu",
-    image: "/atl.png",
-    url: "#",
-  },
+  { name: "Tarsus Belediyesi", image: "/tarsus.svg", url: "https://www.tarsus.bel.tr" },
+  { name: "Heardline", image: "/heardline1.png", url: "#" },
+  { name: "Mersin Üniversitesi", image: "/meu.png", url: "https://www.mersin.edu.tr/" },
+  { name: "Erkan Design", image: "/erkan.png", url: "#" },
+  { name: "Green River", image: "/greenriver.png", url: "#" },
+  { name: "Reparo Yoga", image: "/Reparo-Yoga.jpg", url: "https://reparoyoga.com" },
+  { name: "Cezy Yenilebilir Enerji", image: "/cezy.png", url: "#" },
+  { name: "Türkiye Atletizm Federasyonu", image: "/atl.png", url: "#" },
+  { name: "Tam Güvenlik", image: "/tam.png", url: "#" },
+  { name: "Mey-Pak", image: "/meypak.png", url: "#" },
+  { name: "Midyeci Selman", image: "/midyeci.png", url: "#" },
+  { name: "Gattini", image: "/gattini.jpeg", url: "#" },
+  { name: "TFD Mersin", image: "/tfdmersin.jpeg", url: "#" },
+  { name: "TFD Adana", image: "/tfdadana.jpeg", url: "#" },
 ];
 
 const SupportersPage = () => {
@@ -55,7 +29,7 @@ const SupportersPage = () => {
         <div className="mt-3 mx-auto w-16 h-1 bg-[#fbbf24] rounded-full" />
       </div>
 
-      {/* Sponsor Grid */}
+      {/* Sponsor Grid — hepsi eşit boyut */}
       <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {sponsors.map((sponsor, i) => (
           <a
@@ -64,14 +38,16 @@ const SupportersPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             title={sponsor.name}
-            className="group bg-gray-50 border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center hover:border-[#fbbf24] hover:shadow-md hover:bg-white transition-all duration-300"
+            className="group bg-gray-50 border border-gray-100 rounded-2xl flex flex-col items-center justify-between hover:border-[#fbbf24] hover:shadow-md hover:bg-white transition-all duration-300 p-5 h-44"
           >
-            <img
-              src={sponsor.image}
-              alt={sponsor.name}
-              className="w-24 h-24 object-contain transition-all duration-300"
-            />
-            <p className="mt-3 text-xs font-semibold text-gray-400 group-hover:text-[#1a237e] text-center transition-colors duration-300">
+            <div className="flex-1 flex items-center justify-center w-full">
+              <img
+                src={sponsor.image}
+                alt={sponsor.name}
+                className="max-w-[96px] max-h-[80px] w-auto h-auto object-contain transition-all duration-300"
+              />
+            </div>
+            <p className="mt-3 text-xs font-semibold text-gray-400 group-hover:text-[#1a237e] text-center transition-colors duration-300 leading-tight">
               {sponsor.name}
             </p>
           </a>

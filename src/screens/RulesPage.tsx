@@ -67,6 +67,13 @@ const rules = [
   },
   {
     number: "09",
+    icon: "🚫",
+    title: "İptal ve İade Politikası",
+    content: null,
+    isCancellation: true,
+  },
+  {
+    number: "10",
     icon: "✉️",
     title: "İletişim",
     content: null,
@@ -151,7 +158,54 @@ const RulesPage = () => {
                   </ul>
                 )}
 
-                {/* İletişim */}
+                {/* İptal ve İade */}
+                {(rule as any).isCancellation && (
+                  <div className="space-y-4 text-sm leading-relaxed">
+                    {/* Kırmızı uyarı kutusu */}
+                    <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 flex items-start gap-3">
+                      <span className="text-xl flex-shrink-0">⚠️</span>
+                      <p className="text-red-700 font-semibold">
+                        Yarışa kayıt tamamlandıktan sonra herhangi bir iptal veya iade işlemi yapılamamaktadır.
+                      </p>
+                    </div>
+
+                    {/* Hukuki dayanak */}
+                    <div className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                      <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">
+                        📜 Hukuki Dayanak
+                      </p>
+                      <p className="text-gray-600">
+                        Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesinin (g) bendi uyarınca; belirli bir tarihte gerçekleştirilen rekreasyon ve eğlence amaçlı etkinliklerde cayma hakkı kullanılamamaktadır.
+                      </p>
+                      <a
+                        href="https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20237&MevzuatTur=7&MevzuatTertip=5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 text-xs text-[#1a237e] font-bold underline hover:text-[#fbbf24] transition-colors"
+                      >
+                        Yönetmelik metnini görüntüle →
+                      </a>
+                    </div>
+
+                    {/* Sağlık raporu istisnası */}
+                    <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-3 flex items-start gap-3">
+                      <span className="text-xl flex-shrink-0">🏥</span>
+                      <div>
+                        <p className="text-[#1a237e] font-bold mb-1">Sağlık Nedeniyle Katılamama</p>
+                        <p className="text-gray-600">
+                          Katılımcının yarıştan önce sağlık raporu ile belgelenmiş bir mazereti bulunması durumunda, ödenen kayıt ücreti iade edilmez; ancak katılımcı bir sonraki yılın aynı etkinliğinde <strong>haklarını kullanabilir</strong>. Bunun için resmi sağlık raporunun yarış tarihinden önce{" "}
+                          <a
+                            href="mailto:karagecittrail@gmail.com"
+                            className="text-[#1a237e] font-bold underline hover:text-[#fbbf24] transition-colors"
+                          >
+                            karagecittrail@gmail.com
+                          </a>{" "}
+                          adresine iletilmesi gerekmektedir.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 {rule.isContact && (
                   <p className="text-gray-600 text-sm md:text-base">
                     Tüm soru ve talepler için:{" "}

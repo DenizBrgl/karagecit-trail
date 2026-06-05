@@ -2,34 +2,34 @@ const ProgramPage = () => {
   const saturday = [
     {
       etkinlik: "Kit Dağıtımı Başlangıç",
-      saat: "17:00",
-      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      saat: "14:00",
+      yer: "Belirlenecek",
       icon: "🎽",
     },
     {
-      etkinlik: "DJ Etkinliği ve Makarna Partisi",
+      etkinlik: "Shake Out Run DJ Etkinliği & Canlı Müzik ",
       saat: "18:00 – 19:30",
-      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      yer: "Belirlecek",
       icon: "🎶",
     },
     {
       etkinlik: "Kit Dağıtımı Bitiş",
-      saat: "20:00",
-      yer: "Draft Mersin Pub (Sahilde GS Meydanı Karşısı)",
+      saat: "18:00",
+      yer: "Belirlenecek",
       icon: "✅",
     },
   ];
 
   const sunday = [
     {
-      etkinlik: "Sayapark / Forum / Eski Devlet Hastanesi — Otobüs Kalkışı (30K & 50K)",
+      etkinlik: "Forum AVM Durağı E5 Karayolu — Otobüs Kalkışı (30K & 50K)",
       saat: "04:00",
       yer: "Mersin",
       icon: "🚌",
       highlight: false,
     },
     {
-      etkinlik: "Sayapark / Forum / Eski Devlet Hastanesi — Otobüs Kalkışı (8K & 15K)",
+      etkinlik: "Forum AVM Durağı E5 Karayolu — Otobüs Kalkışı (8K & 15K)",
       saat: "06:00",
       yer: "Mersin",
       icon: "🚌",
@@ -44,14 +44,14 @@ const ProgramPage = () => {
     },
     {
       etkinlik: "Geç Kit Dağıtımı (30K & 50K)",
-      saat: "05:00 – 06:00",
+      saat: "05:00 – 05:45",
       yer: "Karageçit",
       icon: "🎽",
       highlight: false,
     },
     {
       etkinlik: "Geç Kit Dağıtımı (8K & 15K)",
-      saat: "07:00 – 08:00",
+      saat: "07:00 – 08:15",
       yer: "Karageçit",
       icon: "🎽",
       highlight: false,
@@ -65,25 +65,19 @@ const ProgramPage = () => {
     },
     {
       etkinlik: "Zumba — Isınma & 8K/15K Start Hazırlığı",
-      saat: "08:00 – 08:15",
+      saat: "08:30 – 08:45",
       yer: "Yarış Alanı",
       icon: "💃",
       highlight: false,
     },
     {
       etkinlik: "8K & 15K Yarış Startı",
-      saat: "08:15",
+      saat: "09:00",
       yer: "Başlangıç Noktası",
       icon: "🏁",
       highlight: true,
     },
-    {
-      etkinlik: "Yarış Bitişi",
-      saat: "12:30",
-      yer: "Finish Noktası",
-      icon: "🎯",
-      highlight: false,
-    },
+  
     {
       etkinlik: "Paddle Board Keyfi",
       saat: "13:00",
@@ -93,21 +87,21 @@ const ProgramPage = () => {
     },
     {
       etkinlik: "Ödül Töreni",
-      saat: "14:00",
+      saat: "14:30",
       yer: "Sahne Alanı",
       icon: "🏆",
       highlight: true,
     },
     {
       etkinlik: "Servislerin Ayrılışı (30K & 50K)",
-      saat: "15:30",
+      saat: "16.00",
       yer: "Karageçit",
       icon: "🚌",
       highlight: false,
     },
     {
       etkinlik: "Servislerin Ayrılışı (8K & 15K)",
-      saat: "15:30",
+      saat: "16.00",
       yer: "Karageçit",
       icon: "🚌",
       highlight: false,

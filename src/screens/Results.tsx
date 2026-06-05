@@ -13,9 +13,9 @@ const cards: ResultYearCard[] = [
   {
     year: 2026,
     image: "bora1.jpg",
-    to: "#",
-    desc: "Sonuçlar yakında açıklanacak",
-    isExternal: false,
+    to: "https://www.passtiming.org/karagecit_2026",
+    desc: "Canlı sonuçları görüntüle",
+    isExternal: true,
     isPdf: false,
   },
   {
@@ -39,7 +39,6 @@ const cards: ResultYearCard[] = [
 const Results = () => {
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-20">
-
       {/* Hero */}
       <div className="bg-[#1a237e] py-14 px-4 text-center relative overflow-hidden">
         <div
@@ -70,15 +69,12 @@ const Results = () => {
 
             const content = (
               <div className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-                {/* Görsel */}
                 <img
                   src={c.image}
                   alt={`${c.year} Sonuçları`}
                   className="w-full h-64 md:h-72 object-cover transform transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Rozetler */}
@@ -92,8 +88,14 @@ const Results = () => {
                     📄 PDF
                   </div>
                 )}
+                {/* 2026 canlı rozeti */}
+                {c.year === 2026 && !isComingSoon && (
+                  <div className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                    Canlı
+                  </div>
+                )}
 
-                {/* Yıl & açıklama */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <div className="flex items-end justify-between">
                     <div>
@@ -122,12 +124,7 @@ const Results = () => {
             }
 
             return c.isExternal ? (
-              <a
-                key={c.year}
-                href={c.to}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a key={c.year} href={c.to} target="_blank" rel="noopener noreferrer">
                 {content}
               </a>
             ) : (

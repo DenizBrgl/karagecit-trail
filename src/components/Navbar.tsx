@@ -56,7 +56,7 @@ const Navbar = () => {
             <DropItem to="/ProgramPage" label="🗓️ Program" />
             <DropItem to="/AwardsPage" label="🏆 Ödüller" />
             <DropItem to="/AccommodationsPage" label="🏨 Konaklama" />
-            <DropItem to="/RunList" label="👥 Katılımcı Listesi" />
+            {/* <DropItem to="/RunList" label="👥 Katılımcı Listesi" /> */}
           </DropdownMenu>
 
           <DropdownMenu label="Parkurlar" isTransparent={isTransparent}>
@@ -120,7 +120,7 @@ const Navbar = () => {
                 <MobileLink to="/AwardsPage" label="🏆 Ödüller" onClick={() => setMenuOpen(false)} sub />
                 <MobileLink to="/ProgramPage" label="🗓️ Program" onClick={() => setMenuOpen(false)} sub />
                 <MobileLink to="/AccommodationsPage" label="🏨 Konaklama" onClick={() => setMenuOpen(false)} sub />
-                <MobileLink to="/RunList" label="👥 Katılımcı Listesi" onClick={() => setMenuOpen(false)} sub />
+                {/* <MobileLink to="/RunList" label="👥 Katılımcı Listesi" onClick={() => setMenuOpen(false)} sub /> */}
               </div>
             )}
           </div>

@@ -1,82 +1,63 @@
 const accommodations = [
   {
-    name: "Zevzek Tepesi Bungalov & Kamp",
-    badge: "⭐ Ana Sponsor",
-    badgeColor: "bg-[#fbbf24] text-[#1a237e]",
-    image: "/zevzek.png",
-    location: "Çamlı Yayla",
-    distance: "Yarış alanına 15 km — Servis ile yarış alanına ulaşım sağlanır",
-    distanceNote: "50K parkuru buradan başlar!",
-    phone: "",
-    email: "",
-    features: [
-      "🏠 Bungalov evler",
-      "⛺ Kamp alanı",
-      "🍳 Kahvaltı salonu",
-      "🍽️ Restaurant & yeme-içme",
-      "🫓 Pide fırını",
-      "🌲 Doğa içinde huzurlu konum",
-    ],
-    note: "",
-    highlight: true,
-  },
-  {
     name: "Karageçit Camping",
     badge: "📍 Yarış Alanı",
     badgeColor: "bg-green-500 text-white",
     image: "/bora1.jpg",
     location: "Yarış Alanı — Karageçit",
-    distance: null,
-    distanceNote: null,
     phone: "0536 425 92 83",
     email: null,
-    features: [
-      "⛺ Kamp & piknik alanı",
-      "🏁 Yarışın başlangıç noktasında",
-      "💰 500₺ – 600₺",
-    ],
+    contact: null,
+    features: ["⛺ Kamp & piknik alanı", "🏁 Yarışın başlangıç noktasında", "💰 500₺ – 600₺"],
     note: "Sadece kamp yapılabilir. Kolay erişim için ideal.",
-    highlight: false,
+  },
+  {
+    name: "Namrun Dağ Otel by Esamet Hanım",
+    badge: null,
+    badgeColor: null,
+    image: null,
+    location: "Çayırekinliği, Otel Sk. No:8, 33580 Çamlıyayla/Mersin",
+    phone: "0531 468 83 00",
+    email: null,
+    contact: null,
+    features: [],
+    note: "",
   },
   {
     name: "Cadde Park Hotel",
     badge: null,
+    badgeColor: null,
     image: null,
     location: "Cami Şerif, 33060 Akdeniz/Mersin",
-    distance: null,
-    distanceNote: null,
     phone: "(0324) 237 83 53",
     email: null,
+    contact: null,
     features: [],
     note: "Katılımcılara özel fiyat uygulanmaktadır.",
-    highlight: false,
   },
   {
     name: "Navona Otel",
     badge: null,
+    badgeColor: null,
     image: null,
     location: "Mersin",
-    distance: null,
-    distanceNote: null,
     phone: "0553 143 75 55 / 0324 238 23 23",
     email: "navona@navonaotel.com.tr",
     contact: "Taner Kara",
     features: [],
     note: "",
-    highlight: false,
   },
   {
     name: "Forum Suit Hotel",
     badge: null,
+    badgeColor: null,
     image: null,
     location: "Güvenevler Mh. 1915 Sk. No:3 Yenişehir/Mersin",
-    distance: null,
-    distanceNote: null,
     phone: "+90 324 233 33 44",
     email: "info@forumotel.com",
+    contact: null,
     features: [],
     note: "",
-    highlight: false,
   },
 ];
 
@@ -103,155 +84,105 @@ const AccommodationsPage = () => {
         <div className="relative mt-4 mx-auto w-20 h-1 bg-[#fbbf24] rounded-full" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 mt-12 space-y-6">
+      {/* Ulaşım Bandı */}
+      <div className="max-w-4xl mx-auto px-4 mt-8">
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl px-5 py-4 flex items-center gap-3">
+          <span className="text-2xl flex-shrink-0">🚌</span>
+          <p className="text-[#1a237e] text-sm font-semibold">
+            Yarış alanına <strong>Mersin Merkez</strong> ve <strong>Tarsus</strong>'tan ücretsiz ulaşım sağlanacaktır.
+          </p>
+        </div>
+      </div>
 
-        {/* Büyük kartlar — Zevzek Tepesi & Karageçit Camping */}
-        {accommodations
-          .filter((a) => a.image)
-          .map((item, i) => (
-            <div
-              key={i}
-              className={`rounded-2xl overflow-hidden shadow-md border ${
-                item.highlight
-                  ? "border-[#fbbf24]"
-                  : "border-green-200"
-              }`}
-            >
-              {/* Görsel */}
-              <div className="relative h-52 md:h-64 overflow-hidden">
+      {/* Tüm Kartlar — Eşit Grid */}
+      <div className="max-w-4xl mx-auto px-4 mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
+        {accommodations.map((item, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow overflow-hidden flex flex-col h-full"
+          >
+            {/* Görsel — varsa */}
+            {item.image ? (
+              <div className="relative h-40 overflow-hidden flex-shrink-0">
                 <img
-                  src={item.image!}
+                  src={item.image}
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/30" />
                 {item.badge && (
-                  <span
-                    className={`absolute top-4 left-4 ${item.badgeColor} text-xs font-extrabold px-3 py-1 rounded-full shadow`}
-                  >
+                  <span className={`absolute top-3 left-3 ${item.badgeColor} text-xs font-extrabold px-3 py-1 rounded-full shadow`}>
                     {item.badge}
                   </span>
                 )}
-                <h2 className="absolute bottom-4 left-4 text-white text-2xl font-extrabold drop-shadow-lg">
+              </div>
+            ) : (
+              <div className="bg-[#1a237e] px-5 py-4 flex-shrink-0">
+                <p className="text-[#fbbf24] text-xs font-bold uppercase tracking-widest mb-0.5">
+                  🏨 Konaklama
+                </p>
+                <h3 className="text-white font-extrabold text-base leading-tight">
                   {item.name}
-                </h2>
+                </h3>
               </div>
+            )}
 
-              {/* İçerik */}
-              <div className="bg-white px-6 py-5">
-                {/* Konum & Servis */}
-                <div className="flex flex-wrap gap-3 mb-4">
-                  <span className="flex items-center gap-1 text-sm text-gray-600">
-                    📍 {item.location}
-                  </span>
-                  {item.distance && (
-                    <span className="flex items-center gap-1 text-sm text-[#1a237e] font-semibold">
-                      🚌 {item.distance}
+            {/* İçerik */}
+            <div className="px-5 py-4 flex flex-col flex-1">
+              {item.image && (
+                <h3 className="font-extrabold text-[#1a237e] text-base mb-3">
+                  {item.name}
+                </h3>
+              )}
+
+              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
+                <span className="flex-shrink-0">📍</span>
+                {item.location}
+              </p>
+
+              {item.features.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {item.features.map((f, j) => (
+                    <span key={j} className="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2 py-1 rounded-lg">
+                      {f}
                     </span>
-                  )}
+                  ))}
                 </div>
+              )}
 
-                {item.distanceNote && (
-                  <div className="bg-[#fbbf24]/20 border border-[#fbbf24] text-[#1a237e] text-sm font-bold px-4 py-2 rounded-xl mb-4 inline-block">
-                    🏁 {item.distanceNote}
-                  </div>
+              {item.contact && (
+                <p className="text-xs text-gray-500 mb-2">👤 {item.contact}</p>
+              )}
+
+              <div className="flex-1" />
+
+              <div className="flex flex-col gap-1.5 mt-3">
+                {item.phone && (
+                  <a
+                    href={`tel:${item.phone.replace(/[\s()]/g, "")}`}
+                    className="flex items-center gap-2 text-xs text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors"
+                  >
+                    📞 {item.phone}
+                  </a>
                 )}
-
-                {/* Özellikler */}
-                {item.features.length > 0 && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
-                    {item.features.map((f, j) => (
-                      <span
-                        key={j}
-                        className="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-lg"
-                      >
-                        {f}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {/* İletişim */}
-                <div className="flex flex-wrap gap-4 mt-2">
-                  {item.phone && (
-                    <a
-                      href={`tel:${item.phone.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 text-sm text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors"
-                    >
-                      📞 {item.phone}
-                    </a>
-                  )}
-                  {item.email && (
-                    <a
-                      href={`mailto:${item.email}`}
-                      className="flex items-center gap-2 text-sm text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors"
-                    >
-                      ✉️ {item.email}
-                    </a>
-                  )}
-                </div>
-
-                {item.note && (
-                  <p className="mt-3 text-sm text-green-700 bg-green-50 border border-green-200 px-4 py-2 rounded-xl">
-                    💡 {item.note}
-                  </p>
+                {item.email && (
+                  <a
+                    href={`mailto:${item.email}`}
+                    className="flex items-center gap-2 text-xs text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors break-all"
+                  >
+                    ✉️ {item.email}
+                  </a>
                 )}
               </div>
-            </div>
-          ))}
 
-        {/* Küçük kartlar — Oteller */}
-        <div>
-          <p className="text-[#1a237e] uppercase tracking-widest text-sm font-bold mb-4 mt-8">
-            🏨 Yakın Oteller
-          </p>
-           <p className="mt-3 text-sm text-green-700 bg-green-50 border border-green-200 px-4 py-2 rounded-xl">
-                     🚌 Yarış alanına Mersin Merkez ve Tarsus'tan ulaşım sağlanacak.
-                  </p>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {accommodations
-              .filter((a) => !a.image)
-              .map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl shadow-sm border-l-4 border-[#fbbf24] px-5 py-4 hover:shadow-md transition-shadow"
-                >
-                  <h3 className="font-extrabold text-[#1a237e] text-base mb-2">
-                    {item.name}
-                  </h3>
-                  {item.location && (
-                    <p className="text-xs text-gray-500 mb-2">📍 {item.location}</p>
-                  )}
-                  {(item as any).contact && (
-                    <p className="text-xs text-gray-600 mb-1">
-                      👤 {(item as any).contact}
-                    </p>
-                  )}
-                  {item.phone && (
-                    <a
-                      href={`tel:${item.phone.replace(/\s/g, "")}`}
-                      className="block text-xs text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors mb-1"
-                    >
-                      📞 {item.phone}
-                    </a>
-                  )}
-                  {item.email && (
-                    <a
-                      href={`mailto:${item.email}`}
-                      className="block text-xs text-[#1a237e] font-semibold hover:text-[#fbbf24] transition-colors mb-1"
-                    >
-                      ✉️ {item.email}
-                    </a>
-                  )}
-                  {item.note && (
-                    <p className="text-xs text-green-600 mt-2 font-medium">
-                      💡 {item.note}
-                    </p>
-                  )}
-                </div>
-              ))}
+              {item.note && (
+                <p className="mt-3 text-xs text-green-700 bg-green-50 border border-green-200 px-3 py-2 rounded-xl">
+                  💡 {item.note}
+                </p>
+              )}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
