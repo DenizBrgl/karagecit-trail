@@ -3,19 +3,14 @@ const ProgramPage = () => {
     {
       etkinlik: "Kit Dağıtımı Başlangıç",
       saat: "14:00",
-      yer: "Belirlenecek",
+      yer: "Trc American Diner",
       icon: "🎽",
     },
-    {
-      etkinlik: "Shake Out Run DJ Etkinliği & Canlı Müzik ",
-      saat: "18:00 – 19:30",
-      yer: "Belirlecek",
-      icon: "🎶",
-    },
+   
     {
       etkinlik: "Kit Dağıtımı Bitiş",
       saat: "18:00",
-      yer: "Belirlenecek",
+      yer: "Trc American Diner",
       icon: "✅",
     },
   ];
@@ -35,13 +30,7 @@ const ProgramPage = () => {
       icon: "🚌",
       highlight: false,
     },
-    {
-      etkinlik: "Tarsus Şehir Stadyumu Kalkış",
-      saat: "05:30",
-      yer: "Tarsus",
-      icon: "🚌",
-      highlight: false,
-    },
+
     {
       etkinlik: "Geç Kit Dağıtımı (30K & 50K)",
       saat: "05:00 – 05:45",
